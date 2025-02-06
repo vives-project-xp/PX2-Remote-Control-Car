@@ -2,11 +2,11 @@
 
 ## Team
 
-Niels Denoo
-Jonas Bonheure
-Jordy Vanassche
-Thomas Demeulenaere
-Kyell Dewindt
-Jarno Bostyn
-Jamie Jones
-Mauro Carlier
+- Niels Denoo
+- Jonas Bonheure
+- Jordy Vanassche
+- Thomas Demeulenaere
+- Kyell Dewindt
+- Jarno Bostyn
+- Jamie Jones
+- Mauro Carlier
