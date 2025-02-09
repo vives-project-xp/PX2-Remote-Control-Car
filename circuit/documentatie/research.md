@@ -220,3 +220,4 @@ Het is belangrijk om de juiste RFID-technologie te kiezen voor de specifieke toe
 
 ## link naar een voorbeeld van een rfid en pi opstelling 
 
+https://medium.com/@braden_hayes/raspberry-pi-room-controller-using-rfid-ff112f5a3fa4
