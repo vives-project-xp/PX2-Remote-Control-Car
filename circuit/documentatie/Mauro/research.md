@@ -42,6 +42,4 @@ Deze info kunnen we optioneel weergeven op een display aan de eindstreep.
 
 ## Microcontroller
 We zullen hiervoor **twee microcontrollers** nodig hebben die met elkaar moeten communiceren. Één voor de start en de andere voor de eindstreep.
-
-### **Aanbevolen microcontroller:**
-- **ESP32**
+**ESP32**
