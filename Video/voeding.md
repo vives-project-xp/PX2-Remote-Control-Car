@@ -36,4 +36,5 @@ Dit werkt op het zelfde princiepe zoals de lineare spanningsregaal maar hiervoor
 
 ### zenerdiode
 Werkt een beetje op hetzelfde princiepe van een weerstanddeler maar hiervoor gebruik je een zenerdiode waar een een bepaalde spanningsval over zet in combinatie met een weerstand. Natuurlijk kun je deze ook vervangen door gewone leds en dat je dan deze op de auto zet als extra maar hiervoor zal je wel zeker de stroom in rekening moeten houden die de camera,esp32 en stappenmotor zou kunnen trekken. 
+R=(V_in-V_z)/(I_z+I_belasting )
 ![zenerdiode](/Video/afbeeldingen/zenerschakeling.gif)
