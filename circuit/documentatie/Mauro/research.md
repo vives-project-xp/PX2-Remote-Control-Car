@@ -4,13 +4,16 @@
 
 ### Timer met lichten (F1)
 De startlichten in de Formule 1 bestaan uit vijf rode lampen boven de startgrid. Ze gaan één voor één aan met korte tussenpozen. Wanneer alle vijf lichten branden, volgt een korte willekeurige pauze (tussen 0,2 en 3 seconden) voordat ze allemaal tegelijk uitgaan. Dit markeert het begin van de race. Als er een probleem is, blijven de lichten aan of gaan er oranje waarschuwingslichten branden om een valse start of uitgestelde start aan te geven.
+
 ![F1 lichten](./lichten.jpg)
 
 **Video:** [YouTube](https://youtu.be/NBmQRO8_d8I)
 
 ### De lichten
 - **RGB led matrix:** Cirkelvormig licht wordt geprogrammeerd op de matrixen.
+   
    ![matrix](./led-matrix.jpg)
+   
   - [Tinytronics RGB LED Matrix](https://www.tinytronics.nl/en/lighting/matrix)
 
 - **3D-geprint of handgemaakt frame:** Om de lichten op te monteren.
