@@ -19,15 +19,21 @@ Stel dat we gebruik maken van een battery pack van 20V dan zal dit veel te veel 
 
 ### Lineare spanningsregelaar
  Hiervan kan je een op voorhand gemaakt component voor gebruik namelijk 7805 of LM317. Deze componenten zetten de overtolige spanning om in warmte. Natuurlijk zul je ook nog een paar extra componenten moeten toevoegn voor de schakeling van afhankelijk hoeveel spanning je op je uitgang wilt. 
+ ![spanningsregelaar](/Video/afbeeldingen/maximum%20rating%207805.png)
+ ![7805](/Video/afbeeldingen/7805-IC.jpg)
 
 ### weerstanddeler
 Je kan ook gebruik maken van 2 weerstanden waardoor je een spanningsdeler kan maken. 
 Dit wordt bepaalde door de formule: 
 $Vo=Vin*R2/R1+R2$
 Dit is een zeer eenvoudige oplossing maar er moet wel rekening worden gehouden met de stroom. 
+![weerstanddeler](/Video/afbeeldingen/voltage-divider-main-circuit.webp)
 
 ### Dc-Dc module
 Dit werkt op het zelfde princiepe zoals de lineare spanningsregaal maar hiervoor zou je geen Pcb meer moeten maken omdat het een kant en klaar bordeje is dat je gwn kan kopen. 
+![Lm2596](/Video/afbeeldingen/Dc-Dc%20module.png)
+
 
 ### zenerdiode
 Werkt een beetje op hetzelfde princiepe van een weerstanddeler maar hiervoor gebruik je een zenerdiode waar een een bepaalde spanningsval over zet in combinatie met een weerstand. Natuurlijk kun je deze ook vervangen door gewone leds en dat je dan deze op de auto zet als extra maar hiervoor zal je wel zeker de stroom in rekening moeten houden die de camera,esp32 en stappenmotor zou kunnen trekken. 
+![zenerdiode](/Video/afbeeldingen/zenerschakeling.gif)
