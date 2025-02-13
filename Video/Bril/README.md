@@ -2,7 +2,7 @@
 
 ## communicatie
 De bril en de de camera kunnen met elkaar verbonden worden via een bepaalde frequentie. De bril heeft ook een channels die gelink zijn aan een bepaalde frequentie range. 
-![video/afbeeldingen/channels.png](channels.png)
+![frequentiekanalen](/Video/afbeeldingen/channels.png)
 
 Natuurlijk is er een beperking op het bereik maar daar spelen bepaalde factoren in namelijk
 - vermogen
