@@ -14,5 +14,5 @@ Om de ingangen van het stuur en pedalen uit te lezen hebben we een softwarebibli
 Wij kunnen gebruik maken van evdev en hidapi voor het uitlezen van de HID-apparaten. De pygame kunnen we ook wel gebruiken maar de joystick ondersteuning hebben we niet nodig.
 We zullen de waarden van het stuur of de hoek dat we hebben moeten omzetten naar een PWM-signaal, want het zijn binaire waarden of signalen die we binnenkrijgen van het stuur en de pedalen.
 
-Voor het aansturen van het RC-autootje zullen we via Wifi of Bluetooth werken. Dit zal dan geburen via een ESP32 (microcontroller).
+Word verbonden met een antenne van de auto zelf (microcontroller).
 ![ESP32](image-2.png)
