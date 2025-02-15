@@ -75,3 +75,7 @@ De laatste optie werkt alleen met een kleine aantal LED's.
 - Raspberry Pi 5V tot WS2812B 5V (of +)
 - Raspberry Pi GND naar WS2812B grond (GND of -)
 - Raspberry Pi GPIO PIN 18 tot WS2812B Gegevens in (DIN)
+
+
+
+https://www.thegeekpub.com/15990/wiring-ws2812b-addressable-leds-to-the-raspbery-pi/?srsltid=AfmBOopCNNKBqP1UMyui9dj0vG7H8_cM-HufnEJjs7s2CZ9avXvwOOD3
