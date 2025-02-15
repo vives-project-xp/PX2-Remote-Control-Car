@@ -15,7 +15,7 @@ Voeg het schema diagram van het circuit toe. Je kunt een afbeelding of een link 
 ![Schema Diagram](path/to/diagram.png)
 
 ## Circuit Beschrijving
-via (nog te bepalen tracking) de tijden en ronden bij houden als ook het start signaal en lighten te bedienen
+via (RFID en 2 schermen ) de tijden en ronden bij houden als ook het start signaal en lichten te bedienen (Via raspberry pi)
 
 ## Montage-instructies
 Stapsgewijze instructies over hoe het circuit te monteren:
@@ -32,3 +32,6 @@ Beschrijf hoe je het circuit kunt testen en veelvoorkomende stappen voor problee
 
 ## Referenties
 Lijst alle referenties of bronnen die zijn gebruikt bij het ontwerp van het circuit.
+- chat gpt
+- gemini
+- https://www.thegeekpub.com/15990/wiring-ws2812b-addressable-leds-to-the-raspbery-pi/?srsltid=AfmBOopCNNKBqP1UMyui9dj0vG7H8_cM-HufnEJjs7s2CZ9avXvwOOD3 (hoe leds va pi aansturen?)
