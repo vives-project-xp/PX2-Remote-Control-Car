@@ -41,7 +41,6 @@ Laten we gewoon een enkele regel code doen om de eerste LED te verlichten en roo
 Voer de volgende code in en voer vervolgens uw Python -programma uit:
 
 ```python
-
 1 | pixels[0] = (255, 0, 0)
 ```
 
@@ -49,16 +48,17 @@ Voer de volgende code in en voer vervolgens uw Python -programma uit:
 
 ![ledstrip rood.jpg](<pi led configuraties/ledstrip rood.jpg>)
 
-Het schrijven van een voorlus of het doen van de loop en het wijzigen van een van de cijfers zal de LED's natuurlijk veranderen volgens uw lusverklaring. De volgende code zou bijvoorbeeld de tweede tot tiende LED's in volgorde 1 seconde uit elkaar laten verlichten (we beginnen bij nul en eindigen bij 9 omdat adresseerbare LED's beginnen bij LED 0).
+Het schrijven van een for-loop en het wijzigen van een van de waarden zal de LED's natuurlijk veranderen volgens uw lusverklaring.
+
+ De volgende code zou bijvoorbeeld de eerste tot de tiende LED's in volgorde 1 seconde uit elkaar laten verlichten (we beginnen bij nul en eindigen bij 9 omdat adresseerbare LED's beginnen bij LED 0).
 
 ```python
-
 1 | for x in range(0, 9):
 2 |    pixels[x] = (255, 0, 0)
 3 |    sleep(1)
 ```
 
-Natuurlijk is het veranderen van de kleur net zo eenvoudig als het wijzigen van de RGB -waarden na pixels (of GRB afhankelijk van uw strips).
+Natuurlijk is het veranderen van de kleur net zo eenvoudig als het wijzigen van de RGB -waarden naar pixels (of RGB afhankelijk van uw strips)
 
 Pixels [0] = (0,0,255) zou bijvoorbeeld helderblauw zijn.
 
@@ -67,7 +67,6 @@ Pixels [0] = (0,0,255) zou bijvoorbeeld helderblauw zijn.
 Als u de hele LED -strip aan wilt zetten en alle LED's op Green instelt, zouden we het vulopdracht gebruiken om dat te doen:
 
 ```python
-
 1 | pixels.fill((0, 255, 0))
 ```
 
