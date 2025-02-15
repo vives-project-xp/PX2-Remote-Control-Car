@@ -42,7 +42,7 @@ Voer de volgende code in en voer vervolgens uw Python -programma uit:
 
 ```python
 
-pixels[0] = (255, 0, 0)
+1 | pixels[0] = (255, 0, 0)
 ```
 
 ### Bij uitvoering moet uw adresseerbare LED-strip er de volgende afbeelding uitzien
@@ -53,9 +53,9 @@ Het schrijven van een voorlus of het doen van de loop en het wijzigen van een va
 
 ```python
 
-for x in range(0, 9):
-    pixels[x] = (255, 0, 0)
-    sleep(1)
+1 | for x in range(0, 9):
+2 |    pixels[x] = (255, 0, 0)
+3 |    sleep(1)
 ```
 
 Natuurlijk is het veranderen van de kleur net zo eenvoudig als het wijzigen van de RGB -waarden na pixels (of GRB afhankelijk van uw strips).
@@ -67,8 +67,8 @@ Pixels [0] = (0,0,255) zou bijvoorbeeld helderblauw zijn.
 Als u de hele LED -strip aan wilt zetten en alle LED's op Green instelt, zouden we het vulopdracht gebruiken om dat te doen:
 
 ```python
-pixels.fill((0, 255, 0))
 
+1 | pixels.fill((0, 255, 0))
 ```
 
 ![ledstrip groen.jpg](<pi led configuraties/ledstrip groen.jpg>)
