@@ -71,3 +71,5 @@ Als u de hele LED -strip aan wilt zetten en alle LED's op Green instelt, zouden 
 ```
 
 ![ledstrip groen.jpg](<pi led configuraties/ledstrip groen.jpg>)
+
+[Controlling WS2812B LEDs with a Raspberry Pi](https://www.thegeekpub.com/16187/controlling-ws2812b-leds-with-a-raspberry-pi/)
