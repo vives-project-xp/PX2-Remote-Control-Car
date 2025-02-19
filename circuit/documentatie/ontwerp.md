@@ -3,7 +3,7 @@
 ![ontwerp](./Mauro/ontwerp2.png)
 ![ontwerp](./Mauro/ontwerp3.png)
 
-## Materiaal:
+## Benodigdheden:
 - **Twee buizen** voor de pilaren (keuze materiaal?)
 - **Lange plaat** waar alles kan aan bevestigd worden (hout)
 - **Piezo-sirene (12V of 24V)** – Veel luider dan een standaard buzzer en geschikt voor een race-ervaring.
