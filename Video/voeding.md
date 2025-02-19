@@ -44,4 +44,5 @@ R=(V_in-V_z)/(I_z+I_belasting )
 
 We maken gebruik van een parrallele schakeling want bij parallel is de spanning overal gelijk. Maar de stroom is wel verschillent. 
 I_totaal=I_camera+I_ventillator=260mA+60mA=320mA
+
 P_totaal=I_totaal*U_bat=320mA*12V=3,84W
