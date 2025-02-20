@@ -24,19 +24,19 @@ Pygame zorgt ervoor dat je eenvoudig de stuurhoek, pedalen en knoppen kunt uitle
 
 *Stap 1:* Pygame installeren op Raspberry Pi
 
-```
+```bash
 pip install pygame
 ```
 Controleer daarna of het goed werkt met:
 
-```
+```python
 python3 -c "import pygame; print(pygame.ver)"
 ```
 *Stap 2:* Controller herkennen en verbinden
 
 Je kunt eerst checken hoeveel joysticks/stuuren er zijn aangesloten:
 
-```
+```python
 import pygame
 
 pygame.init()
@@ -52,7 +52,7 @@ for i in range(joystick_count):
 ```
 Als het stuur correct wordt herkend, zie je zoiets als:
 (de volgende code is yaml)
-```
+```python
 Aantal joysticks gevonden: 1
 Joystick 0: Logitech G29 Driving Force Racing Wheel
 
@@ -61,7 +61,7 @@ Joystick 0: Logitech G29 Driving Force Racing Wheel
 *Stap 3:* Stuur en pedalen uitlezen
 
 Gebruik deze code om de stuurhoek, gas, rem en koppeling live te lezen:
-```
+```python
 import pygame
 
 pygame.init()
@@ -136,3 +136,6 @@ Pygame is eigenlijk een wrapper om SDL2 heen, wat betekent dat Pygame intern SDL
 
 + SDL2 ondersteunt direct joysticks/gamepads/racesturen zonder dat je zelf HID-rapporten hoeft te decoderen.
 
+We zullen een stuk code schrijven zodat we het stuur en pedalen kunnen binnenlezen en da ook kunnen uitlezen.
+
+We zullen nu de code per sectie uitleggen.
