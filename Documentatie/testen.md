@@ -4,9 +4,9 @@
 
 - ✅ RC-auto met camera en besturing  
 - ✅ VR-bril met live video-feed
-- ✅ shermonitor en micro-HDMI naar HDMI-kabel
+- ✅ scherm-monitor en micro-HDMI naar HDMI-kabel
 - ✅ Afgesloten testcircuit  
-- ✅ Opladers en extra accu’s  
+- ✅ Opladers en extra accu's  
 - ✅ Laptop voor logging (optioneel)  
 - ✅ Stopwatch of software voor rondetijden  
 
@@ -14,7 +14,7 @@
 
 ## Doel van de test
 
-Op een leuke en interactieve manier potentieële studenten warm maken voor de richting ict-elektronica in vives en tevens ook de kunde en expertise van vives als een hogeschool in de verf te zetten
+Op een leuke en interactieve manier potentiële studenten warm maken voor de richting ict-elektronica in VIVES en tevens ook de kunde en expertise van vives als een hogeschool in de verf te zetten
 
 ## Testonderwerp
 
@@ -28,7 +28,7 @@ remmen is angst (px2)
 
 het aanpassen van een bestaande product (RC auto's) om via first-person-camera en race-sim stuur en pedalen te emuleren hoe het voelt om in de auto te zitten en tevens tegen elkaar te kunnen racen.
 
-## Testsubject
+## doelgroepen
 
 - student in spe
 - kinderen
@@ -36,11 +36,11 @@ het aanpassen van een bestaande product (RC auto's) om via first-person-camera e
 
 ---
 
-### Vereisten testsubject
+### Vereisten testsubjecten
 
 - [ ] moet in staat zijn om met stuur en pedalen te kunnen rijden of hier toch enig notie van hebben.
 - [ ] in goede gezondheid verkeren
-- [ ] over de nodige reactie tijd beshikken om al dan niet vlug stil te kunnen staan
+- [ ] over de nodige reactie tijd beschikken om al dan niet vlug stil te kunnen staan
 - [ ] groot genoeg zijn om aan het stuur en pedalen te kunnen
 
 ### Uitsluitingscriteria
@@ -52,13 +52,13 @@ het aanpassen van een bestaande product (RC auto's) om via first-person-camera e
 
 ### Testomgeving
 
-- een op voorhand afgebakene route waar geen voetgangers of vreemde voorwerpen op het "circuit" kunnen komen
+- een op voorhand afgebakende route waar geen voetgangers of vreemde voorwerpen op het "circuit" kunnen komen
 
 ## **1. Voorbereiding**  
 
 ### **1.1. Controle van de hardware**
 
-- Batterijen opgegeladen van de auto en gemonteerd ?
+- Batterijen opgeladen van de auto en gemonteerd ?
 &nbsp;
   - [ ] Geslaagd
 &nbsp;
@@ -79,7 +79,7 @@ het aanpassen van een bestaande product (RC auto's) om via first-person-camera e
   - [ ] Gefaald
 &nbsp;
 
-- monitor voorzien van voeding en aangesloten aan HDMI-out van VR-bril en hdmi poort van monitor?
+- monitor voorzien van voeding en aangesloten aan HDMI-out van VR-bril en HDMI poort van monitor?
 &nbsp;
   - [ ] Geslaagd
 &nbsp;
@@ -99,7 +99,7 @@ het aanpassen van een bestaande product (RC auto's) om via first-person-camera e
 &nbsp;
   - [ ] Gefaald
 &nbsp;
-- Controleer de besturing van de RC-auto (stuur en gasrespons).
+- Controleer de besturing van de RC-auto (stuur en gas-respons).
 &nbsp;
   - [ ] Geslaagd
 &nbsp;
@@ -279,7 +279,7 @@ het aanpassen van een bestaande product (RC auto's) om via first-person-camera e
 
 - feedback van de gebruiker
 
-<textarea id="feedback" name="user feedback" rows="30" cols="300">
+<textarea placeholder="type here" name="user feedback" rows="30%" cols="100%">
 
 </textarea>
  <input type="submit" value="Submit">
