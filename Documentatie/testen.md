@@ -279,7 +279,8 @@ het aanpassen van een bestaande product (RC auto's) om via first-person-camera e
 
 - feedback van de gebruiker
 
-<textarea placeholder="type here" name="user feedback" rows="30%" cols="100%">
+  <textarea placeholder="type here" name="user feedback" rows="30%" cols="100%">
 
-</textarea>
- <input type="submit" value="Submit">
+  </textarea>
+
+  <input type="submit" value="Submit">
