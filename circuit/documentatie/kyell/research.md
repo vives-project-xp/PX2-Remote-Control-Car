@@ -1,11 +1,10 @@
 # research
 
-## ideeën 
+## ideeën
 
 - enkel start leds (buzzer)  --> via electronica of gebruik van controller
 - matrix led's voor naam en stand (animaties) ??
 - tracking van tijd (rfid?)
-
 
 ## analyse van hoe "start lichten" werken in de formule 1
 
@@ -45,41 +44,46 @@ Het circuit blijft vervolgens inactief totdat de teller wordt gereset door druk 
 
 Auteur: David Richards - Copyright: Silicon Chip Electronics
 
-# controllers
+## controllers
 
 men kan deze schakeling ook vereenvoudigen door microcontrollers de werking te laten emuleren (programmeren)
 
 ## voordelen
+
 - met weinig componenten op te bouwen
-- snel aanpasbaar door programmeren 
+- snel aanpasbaar door programmeren
 - kan meerder functies combineren in 1 platform (bv timing, RFID, led sturing)
 - buzzer kan apart geprogrameerd worden
 
-## nadelen 
+## nadelen
+
 - stroom verbruik is een groot vraagteken na wat opzoeken denk ik dat het kan maar dan moet er bijkomend electronica ter ondersteuning komen
 - welk platform kiezen (pi of arduino of esp232)
 - prijs
 
-## Conclusie 
-- er dient grondig onderzocht te worden hoe en wat nodig is en wat de mogelijkheden zijn daar de timing toch een stand alone systeem moet zijn 
+## besluit
 
-# matrix boards
+- er dient grondig onderzocht te worden hoe en wat nodig is en wat de mogelijkheden zijn daar de timing toch een stand alone systeem moet zijn
+
+## matrix boards
 
 zijn als het ware "kleine tv's".
 
 is een groep (matrix) van led's die kunnen aangestuurd worden om zo animaties en decal's te maken.
 
 ## grootes
+
 - kan zo groot gemaakt worden als gewenst
 - hangbare maten zijn:
-    - 32x32
-    - 64x32
-    - 8x8
+  - 32x32
+  - 64x32
+  - 8x8
 
 ## comm
+
 - werkt meestal via het i²C protocol
 
-# analyse van tijd tracking in de racerij
+## analyse van tijd tracking in de racerij
 
 ### via RFID
 
@@ -95,13 +99,13 @@ FID-technologie (Radio Frequency Identification) kan worden gebruikt om raceauto
 ***RFID-lezers:***
  Op strategische locaties langs het circuit worden RFID-lezers geplaatst. Deze lezers zenden radiosignalen uit.
 
-***Detectie:*** 
+***Detectie:***
 Wanneer een raceauto met een RFID-tag de buurt van een lezer komt, ontvangt de tag het signaal en stuurt een antwoord terug met de opgeslagen informatie.
 
 ***Dataverwerking:***
  De lezer vangt het signaal van de tag op en stuurt de informatie door naar een computersysteem. Deze informatie wordt vervolgens gebruikt om de positie van de auto op de baan te bepalen, rondetijden te registreren en andere relevante gegevens te verzamelen.
 
-#### Voordelen van RFID-tracking in de racerij:
+#### Voordelen van RFID-tracking in de racerij
 
 ***Nauwkeurige positionering:***
  RFID zorgt voor zeer nauwkeurige real-time tracking van de auto's op de baan.
@@ -114,17 +118,17 @@ Verbeterde analyse: De verzamelde gegevens kunnen worden gebruikt voor gedetaill
 ***Live-tracking:***
  Toeschouwers en teams kunnen de race live volgen via schermen of apps, waardoor de ervaring wordt verrijkt.
 
-#### Overwegingen bij het implementeren van RFID-tracking:
+#### Overwegingen bij het implementeren van RFID-tracking
 
 ***Kosten:*** De aanschaf en installatie van RFID-apparatuur kan kostbaar zijn.
 
 ***Complexiteit:***
  Het opzetten van een betrouwbaar RFID-systeem vereist expertise en planning.
 
-***Omgevingsfactoren:*** 
+***Omgevingsfactoren:***
 Factoren zoals weersomstandigheden en storingen kunnen de prestaties van het systeem beïnvloeden.
 
-### Voorbeelden van toepassingen:
+### Voorbeelden van toepassingen
 
 ***Formule 1:***
  RFID-tracking wordt al jaren gebruikt in de Formule 1 om de raceauto's te volgen en waardevolle data te verzamelen.
@@ -134,11 +138,11 @@ Factoren zoals weersomstandigheden en storingen kunnen de prestaties van het sys
 
 Kortom, RFID-tracking is een waardevolle technologie in de racerij die zorgt voor nauwkeurige positionering, automatische tijdsregistratie en verbeterde analyse. Het draagt bij aan een spannender en interessanter race-evenement voor zowel deelnemers als toeschouwers.
 
-gemini by google
+Gemini by google
 
-# RFID
+## RFID
 
-## werking
+### werking
 
 dit is een systeem die werkt met een zender die is uniek en is dus als het ware een "paspoort".
 
@@ -146,71 +150,87 @@ de ontvanger is het apparaat die de gegevens op de het "paspoort" leest .
 
 dit gebeurt draadloos ( een dagelijks voorbeeld is betalen met je bankkaart of toegangs-controle).
 
-# specs 
+### specs
 
 Het bereik van RFID (Radio Frequency Identification) is afhankelijk van verschillende factoren, zoals het type RFID-tag, de frequentie, de omgeving en het type lezer. Over het algemeen kunnen we de volgende richtlijnen aanhouden:
 
-## Type RFID-tag:
+## Type RFID-tag
 
-### Passieve RFID-tags:
+### Passieve RFID-tags
+
 Deze tags hebben geen eigen energiebron en halen hun energie uit het signaal van de lezer. Ze hebben een beperkter bereik, meestal tot enkele meters.
 
-### Actieve RFID-tags:
+### Actieve RFID-tags
+
 Deze tags hebben een eigen batterij en kunnen daardoor over grotere afstanden communiceren, tot wel 100 meter of meer.
 
-## Frequentie:
+## Frequentie
 
-### Lage frequentie (LF): 
+### Lage frequentie (LF)
+
 Deze frequentie (30-300 kHz) wordt gebruikt voor toepassingen met een kort bereik, zoals toegangspassen.
 
-### Hoge frequentie (HF): 
+### Hoge frequentie (HF)
+
 Deze frequentie (13,56 MHz) wordt gebruikt voor toepassingen met een bereik tot ongeveer 1 meter, zoals contactloze betalingen.
 
-### Ultra hoge frequentie (UHF):
+### Ultra hoge frequentie (UHF)
+
 Deze frequentie (860-960 MHz) wordt gebruikt voor toepassingen met een groter bereik, tot wel 10 meter of meer, zoals voorraadbeheer en asset tracking.
 
-## Omgeving:
+## Omgeving
 
-### Obstakels: 
+### Obstakels
+
 Metalen voorwerpen en vloeistoffen kunnen het signaal verstoren en het bereik verkleinen.
 
-### Weersomstandigheden: 
+### Weersomstandigheden
+
 Extreme temperaturen en vochtigheid kunnen de prestaties van het systeem beïnvloeden.
 
-## Type lezer:
+## Type lezer
 
-### Zendvermogen: 
+### Zendvermogen
+
 Lezers met een hoger zendvermogen hebben een groter bereik.
 
-### Antenne: 
+### Antenne
+
 Het type en de kwaliteit van de antenne beïnvloeden het bereik.
 
-## Overzicht van typische bereiken:
+## Overzicht van typische bereiken
 
-### LF RFID:
+### LF RFID
+
 tot 10 cm
 
-### HF RFID: 
+### HF RFID
+
 Tot 1 meter
 
-### UHF RFID (passief): 
+### UHF RFID (passief)
+
 Tot 10 meter
 
-### UHF RFID (actief): 
+### UHF RFID (actief)
+
 Tot 100 meter of meer
 
-## Factoren die het bereik kunnen beïnvloeden:
+## Factoren die het bereik kunnen beïnvloeden
 
-### Oriëntatie van de tag en lezer: 
+### Oriëntatie van de tag en lezer
+
 De tag en lezer moeten correct zijn georiënteerd om een goede communicatie te waarborgen.
 
-### Interferentie:
+### Interferentie
+
 Andere elektronische apparaten kunnen het signaal verstoren.
 
-### Kwaliteit van de componenten:
+### Kwaliteit van de componenten
+
 Hoogwaardige tags en lezers presteren beter en hebben een groter bereik.
 
-## Conclusie:
+### Conclusie
 
 Het bereik van RFID varieert sterk, afhankelijk van de factoren die hierboven zijn genoemd. Voor de meeste toepassingen is een bereik van enkele meters tot enkele tientallen meters voldoende.
 
@@ -218,7 +238,6 @@ In specifieke gevallen, zoals bij actieve RFID-tags, kunnen afstanden tot 100 me
 
 Het is belangrijk om de juiste RFID-technologie te kiezen voor de specifieke toepassing en rekening te houden met de omgevingsfactoren die het bereik kunnen beïnvloeden.
 
-## link naar een voorbeeld van een rfid en pi opstelling 
+## link naar een voorbeeld van een rfid en pi opstelling
 
-https://medium.com/@braden_hayes/raspberry-pi-room-controller-using-rfid-ff112f5a3fa4
-
+[https://medium.com/@braden_hayes/raspberry-pi-room-controller-using-rfid-ff112f5a3fa4](https://medium.com/@braden_hayes/raspberry-pi-room-controller-using-rfid-ff112f5a3fa4)
