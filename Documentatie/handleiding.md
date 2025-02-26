@@ -12,13 +12,9 @@
 
 ---
 
-## Doel van de test
+## beschrijving
 
 Op een leuke en interactieve manier potentiële studenten warm maken voor de richting ict-elektronica in VIVES en tevens ook de kunde en expertise van vives als een hogeschool in de verf te zetten
-
-## Testonderwerp
-
-het testen van de gebeurde aanpassingen en integraties en de algemene beleving tijdens het rijden met de auto
 
 ## Naam
 
@@ -36,7 +32,7 @@ het aanpassen van een bestaande product (RC auto's) om via first-person-camera e
 
 ---
 
-### Vereisten testsubjecten
+### Vereisten bestuurders
 
 - [ ] moet in staat zijn om met stuur en pedalen te kunnen rijden of hier toch enig notie van hebben.
 - [ ] in goede gezondheid verkeren
@@ -49,10 +45,6 @@ het aanpassen van een bestaande product (RC auto's) om via first-person-camera e
 - [ ] verkeerd niet in goede gezondheid
 - [ ] beschikt niet over de nodige reactie tijd om vlug te kunnen stil staan
 - [ ] kan het stuur en de pedalen niet tegelijk bedienen
-
-### Testomgeving
-
-- een op voorhand afgebakende route waar geen voetgangers of vreemde voorwerpen op het "circuit" kunnen komen
 
 ## **1. Voorbereiding**  
 
@@ -228,59 +220,3 @@ het aanpassen van een bestaande product (RC auto's) om via first-person-camera e
   - [ ] Gefaald
 
 ---
-
-## **5. Betrouwbaarheid en Veiligheid**  
-
-- Rijd lange tijd om te testen hoe lang de batterij meegaat.
-&nbsp;
-  - [ ] Geslaagd
-&nbsp;
-  - [ ] Gefaald
-&nbsp;
-
-- Controleer of de verbinding stabiel blijft tijdens langere ritten.
-&nbsp;
-  - [ ] Geslaagd
-&nbsp;
-  - [ ] Gefaald
-&nbsp;
-
-- Test of de auto goed stopt bij signaalverlies.
-&nbsp;
-  - [ ] Geslaagd
-&nbsp;
-  - [ ] Gefaald
-
----
-
-## **6. Evaluatie en Verbeteringen**  
-
-- Noteer verbeterpunten, zoals vertraging in de videostream of besturing.
-&nbsp;
-  - [ ] Geslaagd
-&nbsp;
-  - [ ] Gefaald
-&nbsp;
-
-- Controleer of de VR-bril comfortabel is voor lange sessies.
-&nbsp;
-  - [ ] Geslaagd
-&nbsp;
-  - [ ] Gefaald
-&nbsp;
-
-- Test of de VR-ervaring verbeterd kan worden met extra sensoren of instellingen.
-&nbsp;
-  - [ ] Geslaagd
-&nbsp;
-  - [ ] Gefaald
-
----
-
-- feedback van de gebruiker
-
-  <textarea placeholder="type here" name="user feedback" rows="30%" cols="100%">
-
-  </textarea>
-
-  <input type="submit" value="Submit">
