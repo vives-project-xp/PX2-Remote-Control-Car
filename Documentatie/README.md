@@ -14,6 +14,7 @@ Hier is de algemene documentatie.
 
 - [Circuit](/circuit/README.md)
 - [Besturing](/Besturing/README.md)
+- [testen](./testen.md)
 
 ## Bronnen
 
