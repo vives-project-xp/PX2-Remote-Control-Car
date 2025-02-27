@@ -28,9 +28,9 @@ De vier gebruikte uitgangen van IC3 zijn verbonden met een weerstandsladder die 
 
 Naarmate het aantal toeneemt, neemt de spanning op de bovenkant van de ladder ook toe en dit is verbonden met de inverterende ingangen van vier comparators in IC4 (een LM339) en naar IC5, een 741 OP -amp ook verbonden als vergelijker.
 
-![circuit/documentatie/image.png](image.png)
+![circuit/documentatie/image.png](./afb/image.png)
 
-De positieve ingangen van de comparators zijn verbonden met de tikken van een spanningsdeler, waarbij de tikspanningen ingesteld met VR1, een 100ko -trimpot.
+De positieve ingangen van de comparators zijn verbonden   met de tikken van een spanningsdeler, waarbij de tikspanningen ingesteld met VR1, een 100ko -trimpot.
 
 Aangezien IC3 telt, schakelt de stijgende stapspanning van de DAC -ladder de vergelijkers in volgorde, beginnend met IC4D en werkt tot IC5.
 
