@@ -42,7 +42,12 @@ R=(V_in-V_z)/(I_z+I_belasting )
 ## Elektrisch schema
 ![elektrisch schema](/Video/afbeeldingen/elektrische%20schema.png)
 
-We maken gebruik van een parrallele schakeling want bij parallel is de spanning overal gelijk. Maar de stroom is wel verschillent. 
-I_totaal=I_camera+I_ventillator=260mA+60mA=320mA
+![voeding camera](/Video/afbeeldingen/voeding%20camera.jpg)
+![voeding totaal](/Video/afbeeldingen/voeding%20totaal.jpg)
 
-P_totaal=I_totaal*U_bat=320mA*12V=3,84W
+We maken gebruik van een parrallele schakeling want bij parallel is de spanning overal gelijk. Maar de stroom is wel verschillent. 
+I_totaal=I_camera+I_ventillator=270mA+60mA=330mA
+
+P_totaal=I_totaal*U_bat=330mA*12V=3,96W
+
+
