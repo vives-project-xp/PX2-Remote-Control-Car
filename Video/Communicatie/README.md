@@ -6,7 +6,7 @@ De communicatie werkt eigenlijk via digitale draadloze verbinding op de 5,725-5,
 
 ## Beelden doorsturen
 
-### Camera -> VTX
+### Camera &rarr; VTX
 
 De camera zet het optische beeld om in een digital videostroom. Dit wordt via een datakabel(MIPI-interface) naar de VTX gestuurd.
 
