@@ -1,1 +1,6 @@
+Stap 1: Verwijder de pcb van de controler.
+we merken dat de besturing van de auto gebuirt door aan potentiometers te draaien, hierdoor kunnen wij nu een spanning in de plaats van die potentiometers steken om zo de auto aan te sturen.
+Test: we kunnen het nu aan een spanningsbron hangen en kijken wat er gebeurt. We noteren dat links 0V is en rechts 3,3V dus is neutraal 1,65V en voor het gas geven is 0V volle gas vooruit en 3,3V achteruit met neutraal 1,65V.
+Stap 2: Verbinden met een raspberryPi.
+Een raspberryPi kan niet zomaar een spanning uitsturen gellukkig is er hier een oplossing voor namelijk PWM, We bekijken welke pinnen PWM pinnen zijn op onze Pi.
 
