@@ -55,13 +55,13 @@ try:
         throttle_voltage = 1.65  # Neutraal
 
         if throttle < 0.9:  # Gas wordt ingedrukt
-            throttle_voltage = scale_exponential_mirrored(throttle, 1, -1, 1.65, 0, k=3)  
+            throttle_voltage = scale_exponential_mirrored(throttle, 1, -1, 1.65, 0.9, k=3)  
 
         # Rem (1 = geen rem, -1 = vol rem)
         brake = joystick.get_axis(1)
 
         if brake < 0.9:  # Rem wordt ingedrukt
-            throttle_voltage = scale_exponential_mirrored(brake, 1, -1, 1.65, 3.3, k=3)  
+            throttle_voltage = scale_exponential_mirrored(brake, 1, -1, 1.65, 2.4, k=3)  
 
         set_voltage(THROTTLE_PIN, throttle_voltage)
 
