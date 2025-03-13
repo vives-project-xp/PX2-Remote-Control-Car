@@ -1,4 +1,3 @@
-```python
 import pygame  # Voor de input van stuur en pedalen in te lezen
 import time
 import lgpio  # Voor de GPIO-besturing van de motoren
@@ -79,4 +78,3 @@ except KeyboardInterrupt:
 
     # GPIO chip sluiten
     lgpio.gpiochip_close(chip)
-```
