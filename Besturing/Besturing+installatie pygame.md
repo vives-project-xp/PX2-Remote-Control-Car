@@ -1,7 +1,7 @@
 # Auto
 
 Verbinden van een stuur en pedalen met een Raspberry Pi en het signaal uitlezen.
-![logitech stuur + pedalen](image.png)
+![logitech stuur + pedalen](/Besturing/Images/image-1.png)
 
 We zullen het stuur en de pedalen met een usb verbinden aan de raspberry pi (want er zit een usb verbinding op rapsberry pi).
 ![Raspberry Pi](image-1.png)
