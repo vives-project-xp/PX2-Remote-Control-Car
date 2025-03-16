@@ -3,6 +3,7 @@
 ## Stap 1: Verwijder de PCB van de controller
 
 We merken dat de besturing van de auto gebeurt door aan potentiometers te draaien. Hierdoor kunnen wij nu een spanning in de plaats van die potentiometers steken om zo de auto aan te sturen.
+![20250227_154236](https://github.com/user-attachments/assets/cfab9f6f-1a88-4409-8efe-c221b727cd5d)
 
 ### Test
 We kunnen de aansluiting testen door de potentiometers te vervangen door een spanningsbron en te observeren wat er gebeurt:
@@ -11,6 +12,12 @@ We kunnen de aansluiting testen door de potentiometers te vervangen door een spa
 - Neutraal = **1,65V**
 - **Gas geven**: 0V = volle gas vooruit
 - **Achteruit**: 3,3V = volle snelheid achteruit
+
+
+https://github.com/user-attachments/assets/bf9e1529-d540-4d2a-a893-f2ca37d787b2
+
+
+
 
 ## Stap 2: Verbinden met een Raspberry Pi
 
