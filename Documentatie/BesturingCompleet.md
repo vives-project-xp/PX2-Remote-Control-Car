@@ -22,6 +22,13 @@ Een Raspberry Pi kan niet zomaar een spanning uitsturen. Gelukkig is er een oplo
    - **Componenten**:
      - **1kΩ weerstand** in serie
      - **22pF condensator** naar de grond
+     
+Raspberry Pi GPIO18 (PWM) ---> [1kΩ Resistor] ---> Output Voltage to Circuit
+                                      |
+                                      |
+                                [10µF Capacitor]
+                                      |
+                                     GND
 
 ## Stap 3: Een programma schrijven
 
