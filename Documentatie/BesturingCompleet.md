@@ -34,7 +34,12 @@ Raspberry Pi GPIO18 (PWM) ---> [1kΩ Resistor] ---> Output Voltage to Circuit
                                 [10µF Capacitor]
                                       |
                                      GND
-https://github.com/user-attachments/assets/bf9e1529-d540-4d2a-a893-f2ca37d787b2
+
+
+
+
+https://github.com/user-attachments/assets/40285a8b-6b43-4666-bb9f-b8aa4ce95980
+
 
 ## Stap 3: Een programma schrijven
 
