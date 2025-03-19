@@ -15,7 +15,9 @@
   Geschikt voor grotere afstanden (1-10 meter, afhankelijk van de antenne). Kan meerdere tags tegelijk lezen (handig als er meerdere auto's dicht bij elkaar rijden). Vereist UHF RFID-tags, die iets duurder zijn dan de standaard 13.56 MHz-tags.
 
   **JRD-4035 Lezermodule 840MHz ~ 960MHz (reader):**
+
   ![reader](./research/afb/RFID-Lezer.png)
+  
   ***Product features***:  
   * Stabiele herkenningsafstand 1,5m-2m , 
   * Bereik werkspectrum: 840-960MHz ,
