@@ -89,9 +89,8 @@ while running:
                 elif not auto2_stopped:
                     auto2_stopped = True
                     auto2_stop_ticks = elapsed_ticks
-            elif event.key == pygame.K_RETURN:  # Start or reset the timer
+            elif event.key == pygame.K_RETURN:
                 if not timer_running:
-                    # Start the timer
                     timer_running = True
                     timer_stopped = False
                     auto1_stopped = False
@@ -100,7 +99,6 @@ while running:
                     auto2_time = "00:00.000"
                     start_ticks = pygame.time.get_ticks()
                 else:
-                    # Reset the timer
                     timer_running = False
                     timer_stopped = False
                     auto1_stopped = False
