@@ -8,7 +8,7 @@
 - [<img src="https://github.com/Thomas8650.png" alt="" width="25" style="margin-bottom:-6px;">Thomas Demeulenaere](https://github.com/Thomas8650)
 - [<img src="https://github.com/kyell182.png" alt="" width="25" style="margin-bottom:-6px;">Kyell De Windt](https://github.com/kyell182)
 - [<img src="https://github.com/Jarno-max.png" alt="" width="25" style="margin-bottom:-6px;">Jarno Bostyn](https://github.com/Jarno-max)
-- Jamie Jones
+- [<img src="https://github.com/Jarno-max.png" alt="" width="25" style="margin-bottom:-6px;">Jamie Jones](https://github.com/JollyJones101)
 - [<img src="https://github.com/MauroCarlier.png" alt="" width="25" style="margin-bottom:-6px;">Mauro Carlier](https://github.com/maurocarlier)
 - [<img src="https://github.com/lomopoio.png" alt="" width="25" style="margin-bottom:-6px;">Robbe Lambrechts](https://github.com/lomopoio)
 
