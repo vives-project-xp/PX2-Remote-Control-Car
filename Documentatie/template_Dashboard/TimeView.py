@@ -22,22 +22,27 @@ auto1_stopped = False
 auto2_stopped = False
 auto1_stop_ticks = 0
 auto2_stop_ticks = 0
+timer_stopped = False
 
 running = True
 while running:
     screen.fill(WHITE)
     
-    elapsed_ticks = pygame.time.get_ticks() - start_ticks
-    elapsed_seconds = elapsed_ticks // 1000
-    elapsed_minutes = elapsed_seconds // 60
-    elapsed_seconds = elapsed_seconds % 60
-    elapsed_milliseconds = elapsed_ticks % 1000
-    time_str = f"{elapsed_minutes:02}:{elapsed_seconds:02}.{elapsed_milliseconds:03d}"
+    if not timer_stopped:
+        elapsed_ticks = pygame.time.get_ticks() - start_ticks
+        elapsed_seconds = elapsed_ticks // 1000
+        elapsed_minutes = elapsed_seconds // 60
+        elapsed_seconds = elapsed_seconds % 60
+        elapsed_milliseconds = elapsed_ticks % 1000
+        time_str = f"{elapsed_minutes:02}:{elapsed_seconds:02}.{elapsed_milliseconds:03d}"
     
     if not auto1_stopped:
         auto1_time = time_str
     if not auto2_stopped:
         auto2_time = time_str
+    
+    if auto1_stopped and auto2_stopped:
+        timer_stopped = True
     
     title_text = font_large.render(f"Tijd: {time_str}", True, BLACK)
     first_text = font_small.render(f"1st  —  {auto1_name}  —  {auto1_time}", True, BLACK)
