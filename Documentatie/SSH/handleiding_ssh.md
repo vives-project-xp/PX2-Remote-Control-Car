@@ -21,6 +21,7 @@ Deze handleiding beschrijft hoe je je Raspberry Pi op afstand kunt bedienen via 
      ```
 
      Zoek het `inet`-adres onder de `wlan0` sectie; dit is je IP-adres.
+     
     ![config](./afb/ipconfig.png)
 
    - Voer het volgende commando uit om je gebruikersnaam te achterhalen:
@@ -47,6 +48,7 @@ Deze handleiding beschrijft hoe je je Raspberry Pi op afstand kunt bedienen via 
    - Voer je wachtwoord in wanneer daarom wordt gevraagd.
 
    - Nu ben je verbonden
+
    ![terminal](./afb/px2rasp.png)
 
 3. **Als de verbinding niet lukt (bijvoorbeeld `ssh: connect to host IP-adres port 22: Connection timed out`):**
@@ -63,10 +65,12 @@ Deze handleiding beschrijft hoe je je Raspberry Pi op afstand kunt bedienen via 
    - Open Visual Studio Code op je laptop.
    - Ga naar de extensies-sectie en zoek naar `Remote-SSH`.
    - Klik op `Install` om de extensie te installeren.
+
    ![extension](./afb/extension.png)
 
 2. **Maak verbinding met de Raspberry Pi:**
    - Klik op het groene pijltje linksonder in Visual Studio Code.
+
    ![knop](./afb/blauwe_knop.png)
 
    - Selecteer `Connect to Host...` en vervolgens `Add New SSH Host...`.
