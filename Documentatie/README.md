@@ -9,6 +9,7 @@ Hier is de algemene documentatie waar je links hebt naar de andere readme's van 
   - [Readme's](#readmes)
   - [Bronnen](#bronnen)
   - [BOM](#bom)
+  - [Architecture document](#architecture-document)
 
 ## Readme's
 
@@ -38,3 +39,9 @@ De BOM of Bill of Materials lijst alle componenten die nodig zijn voor 2 auto's,
 | [Lipo accupack](https://www.conrad.be/nl/p/tattu-lipo-accupack-14-8-v-2300-mah-aantal-cellen-4-75-c-block-xt60-3304647.html#attributesNotes_delivery) | 4 | € 22.1125|
 | [lipo lader](https://www.conrad.be/nl/p/isdt-d-2-multifunctionele-modelbouwlader-230-v-12-a-li-poly-li-ion-lifepo-lihv-nimh-nicd-lood-1947638.html#productDownloads) | 1 | € 123.96 |
 | [Raspberry pi 4](https://be.farnell.com/raspberry-pi/rpi4-modbp-4gb/raspberry-pi-4-model-b-4gb/dp/3051887) | 1 | € 51.33 |
+
+## Architecture document
+
+Dit is het architectuur document.
+
+![](architectur.drawio.png)
