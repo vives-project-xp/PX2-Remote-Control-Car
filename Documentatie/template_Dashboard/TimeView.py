@@ -11,7 +11,7 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 
 font_large = pygame.font.Font(None, HEIGHT // 5)
-font_small = pygame.font.Font(None, HEIGHT // 6)
+font_small = pygame.font.Font(None, HEIGHT // 8)
 
 start_ticks = pygame.time.get_ticks()
 auto1_name = "Auto 1"
@@ -41,8 +41,24 @@ while running:
     if not auto2_stopped:
         auto2_time = time_str
     
-    if auto1_stopped and auto2_stopped:
+    if auto1_stopped and auto2_stopped and not timer_stopped:
         timer_stopped = True
+        
+        if auto1_stop_ticks <= auto2_stop_ticks:
+            winner_name = auto1_name
+            winner_time = auto1_time
+        else:
+            winner_name = auto2_name
+            winner_time = auto2_time
+        
+        winner_text = font_large.render(f"Winner: {winner_name}", True, BLACK)
+        winner_time_text = font_small.render(f"Time: {winner_time}", True, BLACK)
+        screen.fill(WHITE)
+        screen.blit(winner_text, (WIDTH * 0.2, HEIGHT * 0.4))
+        screen.blit(winner_time_text, (WIDTH * 0.2, HEIGHT * 0.6))
+        pygame.display.flip()
+        
+        pygame.time.delay(3000)
     
     title_text = font_large.render(f"Tijd: {time_str}", True, BLACK)
     first_text = font_small.render(f"1st  —  {auto1_name}  —  {auto1_time}", True, BLACK)
