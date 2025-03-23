@@ -17,7 +17,7 @@ pixels = neopixel.NeoPixel(
     board.D18,  # Define the GPIO pin connected to the NeoPixel data line
     89,  # Number of NeoPixel LEDs in the strip
     brightness=0.5,  # Set the brightness level of the LEDs
-    pixel_order=neopixel.GRBW,  # Define the color order (Green, Red, Blue, White)
+    pixel_order=neopixel.GRBW,  # Define the color order (Green, Red, Blue, White) (note that for some reason green and red are switched)
     auto_write=False  # Disable automatic updates to the LEDs
 )
 
