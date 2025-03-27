@@ -1,5 +1,10 @@
 import pygame
 import time
+import RPi.GPIO as GPIO
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 pygame.init()
 
@@ -24,15 +29,16 @@ auto1_stopped = False
 auto2_stopped = False
 auto1_stop_ticks = 0
 auto2_stop_ticks = 0
-timer_stopped = False
+timer_stopped = 0
 timer_running = False
 
 running = True
 while running:
     screen.fill(WHITE)
     
+    elapsed_ticks = pygame.time.get_ticks() - start_ticks if timer_running else 0
+    
     if timer_running and not timer_stopped:
-        elapsed_ticks = pygame.time.get_ticks() - start_ticks
         elapsed_seconds = elapsed_ticks // 1000
         elapsed_minutes = elapsed_seconds // 60
         elapsed_seconds = elapsed_seconds % 60
@@ -44,6 +50,38 @@ while running:
     if not auto2_stopped and timer_running:
         auto2_time = time_str
     
+    auto1_current = auto1_stop_ticks if auto1_stopped else (elapsed_ticks if timer_running else 0)
+    auto2_current = auto2_stop_ticks if auto2_stopped else (elapsed_ticks if timer_running else 0)
+    
+    if auto1_current <= auto2_current:
+        first_name, first_time = auto1_name, auto1_time
+        second_name, second_time = auto2_name, auto2_time
+    else:
+        first_name, first_time = auto2_name, auto2_time
+        second_name, second_time = auto1_name, auto1_time
+    
+    if GPIO.input(23) == GPIO.LOW:
+        timer_running = True
+        timer_stopped = False
+        auto1_stopped = False
+        auto2_stopped = False
+        auto1_time = "00:00.000"
+        auto2_time = "00:00.000"
+        start_ticks = pygame.time.get_ticks()
+        print("start")
+        pygame.time.delay(200)
+    
+    if GPIO.input(25) == GPIO.LOW:
+        timer_running = False
+        timer_stopped = False
+        auto1_stopped = False
+        auto2_stopped = False
+        auto1_time = "00:00.000"
+        auto2_time = "00:00.000"
+        time_str = "00:00.000"
+        print("reset")
+        pygame.time.delay(200)
+        
     if auto1_stopped and auto2_stopped and not timer_stopped:
         timer_stopped = True
         pygame.time.delay(1000)
@@ -69,8 +107,8 @@ while running:
         pygame.time.delay(3000)
     
     title_text = font_large.render(f"Tijd: {time_str}", True, BLACK)
-    first_text = font_small.render(f"1st  —  {auto1_name}  —  {auto1_time}", True, BLACK)
-    second_text = font_small.render(f"2nd  —  {auto2_name}  —  {auto2_time}", True, BLACK)
+    first_text = font_small.render(f"1st  —  {first_name}  —  {first_time}", True, BLACK)
+    second_text = font_small.render(f"2nd  —  {second_name}  —  {second_time}", True, BLACK)
     
     screen.blit(title_text, (WIDTH * 0.05, HEIGHT * 0.05))
     screen.blit(first_text, (WIDTH * 0.05, HEIGHT * 0.35))
@@ -82,31 +120,16 @@ while running:
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 running = False
-            elif event.key == pygame.K_SPACE and timer_running:
-                if not auto1_stopped:
-                    auto1_stopped = True
-                    auto1_stop_ticks = elapsed_ticks
-                elif not auto2_stopped:
-                    auto2_stopped = True
-                    auto2_stop_ticks = elapsed_ticks
-            elif event.key == pygame.K_RETURN:
-                if not timer_running:
-                    timer_running = True
-                    timer_stopped = False
-                    auto1_stopped = False
-                    auto2_stopped = False
-                    auto1_time = "00:00.000"
-                    auto2_time = "00:00.000"
-                    start_ticks = pygame.time.get_ticks()
-                else:
-                    timer_running = False
-                    timer_stopped = False
-                    auto1_stopped = False
-                    auto2_stopped = False
-                    auto1_time = "00:00.000"
-                    auto2_time = "00:00.000"
-                    time_str = "00:00.000"
+            elif event.key == pygame.K_1 and timer_running and not auto1_stopped:
+                auto1_stopped = True
+                auto1_stop_ticks = pygame.time.get_ticks() - start_ticks
+                auto1_time = time_str
+            elif event.key == pygame.K_2 and timer_running and not auto2_stopped:
+                auto2_stopped = True
+                auto2_stop_ticks = pygame.time.get_ticks() - start_ticks
+                auto2_time = time_str
     
     pygame.display.flip()
 
+GPIO.cleanup()
 pygame.quit()
