@@ -69,7 +69,7 @@ Deze handleiding beschrijft hoe je je Raspberry Pi op afstand kunt bedienen via 
    ![extension](./afb/extension.png)
 
 2. **Maak verbinding met de Raspberry Pi:**
-   - Klik op het blauwe pijltje linksonder in Visual Studio Code.
+   - Klik op de blauwe pijltjes linksonder in Visual Studio Code.
 
    ![knop](./afb/blauwe_knop.png)
 
@@ -84,7 +84,7 @@ Deze handleiding beschrijft hoe je je Raspberry Pi op afstand kunt bedienen via 
 
    - Kies het configuratiebestand waarin je de SSH-configuratie wilt opslaan (meestal de bovenste optie).
    ![configure](./afb/conf_file.png)
-   - Klik opnieuw op het groene pijltje linksonder en selecteer de zojuist toegevoegde host om verbinding te maken.
+   - Klik opnieuw op het blauwe pijltje linksonder en selecteer de zojuist toegevoegde host om verbinding te maken.
    - Kies het besturingssysteem van de Raspberry Pi (`Linux`) en voer je wachtwoord in wanneer daarom wordt gevraagd.
 
 3. **Begin met coderen:**
