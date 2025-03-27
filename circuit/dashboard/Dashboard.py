@@ -82,11 +82,12 @@ while running:
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 running = False
-            elif event.key == pygame.K_SPACE and timer_running:
+            elif event.key == pygame.K_1 and timer_running:
                 if not auto1_stopped:
                     auto1_stopped = True
                     auto1_stop_ticks = elapsed_ticks
-                elif not auto2_stopped:
+            elif event.key == pygame.K_2 and timer_running:
+                if not auto2_stopped:
                     auto2_stopped = True
                     auto2_stop_ticks = elapsed_ticks
             elif event.key == pygame.K_RETURN:
@@ -106,6 +107,12 @@ while running:
                     auto1_time = "00:00.000"
                     auto2_time = "00:00.000"
                     time_str = "00:00.000"
+
+        if auto1_stopped and auto2_stopped:
+            if auto2_stop_ticks < auto1_stop_ticks:
+                auto1_name, auto2_name = auto2_name, auto1_name
+                auto1_time, auto2_time = auto2_time, auto1_time
+                auto1_stop_ticks, auto2_stop_ticks = auto2_stop_ticks, auto1_stop_ticks
     
     pygame.display.flip()
 
