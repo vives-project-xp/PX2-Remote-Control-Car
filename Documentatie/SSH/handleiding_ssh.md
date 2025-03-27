@@ -69,7 +69,7 @@ Deze handleiding beschrijft hoe je je Raspberry Pi op afstand kunt bedienen via 
    ![extension](./afb/extension.png)
 
 2. **Maak verbinding met de Raspberry Pi:**
-   - Klik op het groene pijltje linksonder in Visual Studio Code.
+   - Klik op het blauwe pijltje linksonder in Visual Studio Code.
 
    ![knop](./afb/blauwe_knop.png)
 
