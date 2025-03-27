@@ -90,6 +90,10 @@ Deze handleiding beschrijft hoe je je Raspberry Pi op afstand kunt bedienen via 
 3. **Begin met coderen:**
    - Nadat de verbinding tot stand is gebracht, kun je bestanden op de Raspberry Pi openen en bewerken alsof ze lokaal zijn. Maak bijvoorbeeld een nieuwe Markdown-bestand aan om notities te maken of documentatie bij te houden.
 
+   - Zorg ervoor dat je Test Explorer opent in Visual Studio Code, anders worden de .py-bestanden mogelijk niet gevonden.
+
+   ![resultaat](./afb/resultaat.jpg)
+
 ## Conclusie
 
 Met deze stappen kun je je Raspberry Pi op afstand bedienen via SSH en Visual Studio Code gebruiken om efficiënt te coderen zonder directe toegang tot de Raspberry Pi. Dit maakt het ontwikkelen en beheren van projecten op de Raspberry Pi een stuk flexibeler en handiger.
