@@ -25,7 +25,7 @@
 
 1. Verwijder het plastic paneel van de auto door de twee clips aan de voor- en achterkant los te maken.
 
-2. Plaats het harnas voor de camera aan de voorkant van de auto, ter hoogte van het daarvoor gemaakte gat in het plastieken paneel.
+2. Plaats het harnas voor de camera aan de voorkant van de auto, ter hoogte van het daarvoor gemaakte gat in het plastiek paneel.
 
 3. Plaats de camera van bovenaf in het voorziene gat, samen met de bijgeleverde foam.
 
@@ -40,6 +40,32 @@
 8. Schakel de auto in, anders zal deze niet kunnen rijden.
 
 9. Plaats het plastic paneel terug op de auto.
+
+
+## circuit
+1. Voorzie de monitor van stroom.
+
+2. Sluit de HDMI-kabel aan (mini HDMI naar HDMI).
+
+3. Voorzie de Raspberry Pi van stroom.
+
+4. Sluit een toetsenbord en muis aan via de USB-poorten van de Raspberry Pi.
+
+5. Wacht tot de Raspberry Pi is opgestart en open daarna de terminal.
+
+6. Navigeer naar de folder 'circuit'.
+
+7. Voer het volgende commando uit: sudo python Dashboard_lights.py
+Hierdoor wordt de code op de Raspberry Pi geladen.
+
+
+8. Monteer de lichten en knoppen en sluit alle kabels aan op de Raspberry Pi (meer uitleg hierover vind je in het Raspberry Pi-document).
+
+
+´´
+
+´´´
+
 
 
 
