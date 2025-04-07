@@ -1,65 +1,141 @@
 # handleiding voor dummy's
 
-## stuur en pedalen
+🕹️ 1. Stuur en Pedalen
+Benodigdheden:
 
-1. Voorzie de Raspberry Pi van stroom.
+- Raspberry Pi met stroomadapter
 
-2. Sluit de pedalen aan op het stuur en verbind ze met een stroomadapter die mee voorzien is.
+- Stuur en pedalen set
 
-3. Steek de USB-kabel van het stuur in een USB-poort van de Raspberry Pi.
+- Meegeleverde stroomadapter voor de pedalen
 
-## bril en camera 
-1. Voorzie de bril van stroom met de meegeleverde batterij en berg deze netjes op in het bijgeleverde 3D-geprinte harnas.
+- USB-kabel van het stuur
 
-2. Voorzie de camera van stroom (meer details hierover in het hoofdstuk 'Auto').
+Stappen:
 
-3. Druk kort op de knop van de videocompiler totdat de rode LED begint te knipperen.
+1. Raspberry Pi van stroom voorzien
+Sluit de Raspberry Pi aan op een stopcontact met de bijgeleverde stroomadapter en wacht tot het systeem is opgestart.
 
-4. Druk met een dun staafje op de 'Link' knop van de bril. Je hoort een korte pieptoon.
+2. Pedalen aansluiten
+Verbind de pedalen met het stuur en sluit ze aan op de meegeleverde stroomadapter.
 
-5. Wacht tot de pieptoon stopt en het LED-lampje op de videocompiler groen oplicht.
+3. Stuur verbinden
+Steek de USB-kabel van het stuur in een beschikbare USB-poort van de Raspberry Pi.
 
-6. De bril en camera zijn nu gekoppeld, en je kunt het camerabeeld via de bril bekijken.
+📷 2. Bril en Camera
+Benodigdheden:
 
-## Auto
+- Bril met meegeleverde batterij en 3D-geprint harnas
 
-1. Verwijder het plastic paneel van de auto door de twee clips aan de voor- en achterkant los te maken.
+- Camera (details in hoofdstuk 'Auto')
 
-2. Plaats het harnas voor de camera aan de voorkant van de auto, ter hoogte van het daarvoor gemaakte gat in het plastiek paneel.
+- Videocompiler
 
-3. Plaats de camera van bovenaf in het voorziene gat, samen met de bijgeleverde foam.
+- Dun staafje
 
-4. Monteer de videocompiler aan de achterkant van het harnas in het daarvoor bestemde gat.
+Stappen:
 
-5. Bevestig de ventilator op de vier uitstekende pinnen aan de achterzijde.
+1. Bril voorbereiden
+Voorzie de bril van stroom met de meegeleverde batterij en berg deze netjes op in het bijgeleverde 3D-geprinte harnas.
 
-6. Sluit de videocompiler en de ventilator aan op de Bosch-batterij.
+2. Camera van stroom voorzien
+Sluit de camera aan op stroom (raadpleeg het hoofdstuk 'Auto' voor meer details).
 
-7. Plaats de autobatterij op de daarvoor bestemde plek in de auto.
+3. Videocompiler activeren
+Druk kort op de knop van de videocompiler totdat de rode LED begint te knipperen.
 
-8. Schakel de auto in, anders zal deze niet kunnen rijden.
+4. Koppeling starten
+Druk met een dun staafje op de 'Link'-knop van de bril. Je hoort een korte pieptoon.
 
-9. Plaats het plastic paneel terug op de auto.
+5. Koppeling voltooien
+Wacht tot de pieptoon stopt en het LED-lampje op de videocompiler groen oplicht.
+De bril en camera zijn nu gekoppeld, waardoor je het camerabeeld via de bril kunt bekijken.
 
+🚗 3. Auto
+Benodigdheden:
 
-## circuit
-1. Voorzie de monitor van stroom.
+- Auto met plastic paneel
 
-2. Sluit de HDMI-kabel aan (mini HDMI naar HDMI).
+- Harnas voor de camera
 
-3. Voorzie de Raspberry Pi van stroom.
+- Camera met foam
 
-4. Sluit een toetsenbord en muis aan via de USB-poorten van de Raspberry Pi.
+- Videocompiler
 
-5. Wacht tot de Raspberry Pi is opgestart en open daarna de terminal.
+- Ventilator
 
-6. Navigeer naar de folder 'circuit'.
+- Bosch-batterij
 
-7. Voer het volgende commando uit: sudo python Dashboard_lights.py
-Hierdoor wordt de code op de Raspberry Pi geladen.
+- Autobatterij
 
+Stappen:
 
-8. Monteer de lichten en knoppen en sluit alle kabels aan op de Raspberry Pi (meer uitleg hierover vind je in het Raspberry Pi-document).
+1. Plastic paneel verwijderen
+Haal het plastic paneel van de auto door de twee clips aan de voor- en achterkant los te maken.
+
+2. Harnas plaatsen
+Bevestig het harnas voor de camera aan de voorkant van de auto, ter hoogte van het daarvoor gemaakte gat in het plastic paneel.
+
+3. Camera installeren
+Plaats de camera van bovenaf in het voorziene gat en voeg de bijgeleverde foam toe.
+
+4. Videocompiler monteren
+Monteer de videocompiler aan de achterkant van het harnas in het daarvoor bestemde gat.
+
+5. Ventilator bevestigen
+Bevestig de ventilator op de vier uitstekende pinnen aan de achterzijde.
+
+6. Stroomvoorziening aansluiten
+Sluit de videocompiler en de ventilator aan op de Bosch-batterij.
+
+7. Autobatterij plaatsen
+Plaats de autobatterij op de daarvoor bestemde plek in de auto.
+
+8. Auto inschakelen
+Schakel de auto in. (Zorg dat dit gebeurt voordat je het plastic paneel terugplaatst, zodat de auto functioneel is.)
+
+9. Plastic paneel terugplaatsen
+Bevestig het plastic paneel terug op de auto.
+
+💻 4. Circuit
+Benodigdheden:
+
+- Monitor met stroomadapter
+
+- HDMI-kabel (mini HDMI naar HDMI)
+
+- Raspberry Pi met stroomadapter
+
+- Toetsenbord en muis
+
+Verbinding met een terminal
+
+Stappen:
+
+1. Monitor aansluiten
+Voorzie de monitor van stroom en sluit de HDMI-kabel aan (van mini HDMI naar HDMI).
+
+2. Raspberry Pi voorbereiden
+Voorzie de Raspberry Pi van stroom.
+
+3. Input-apparaten verbinden
+Sluit een toetsenbord en muis aan op de USB-poorten van de Raspberry Pi.
+
+4. Opstarten en terminal openen
+Wacht tot de Raspberry Pi volledig is opgestart en open daarna de terminal.
+
+5. Navigeren naar de 'circuit' folder
+Ga naar de folder 'circuit' in je bestandsstructuur.
+
+6. Code laden
+Voer het commando uit:
+
+    `sudo python Dashboard_lights.py`
+Hiermee wordt de code op de Raspberry Pi geladen.
+
+Lichten en knoppen monteren
+Monteer de lichten en knoppen en sluit alle kabels aan op de Raspberry Pi.
+Raadpleeg het Raspberry Pi-document voor meer uitleg over de aansluitingen.
 
 
 ´´
