@@ -52,9 +52,9 @@ Eenmaal we weten welke componenten we nodig hebben voor dit deeltje gaan we verd
 
 Namelijk een **RC-Filter :**
 
-![RC-Filter](image.png)
+![RC_Filter](Images/RC_Filter.png)
 
-![Schakeling voor onze controller](image-1.png)
+![BreadBoard](<Images/RC_Filter op BreadBoard.png>)
 
 Zoals je kan zien maken we gebruik van twee RC-Filters omdat we bij beide inputs één nodig hebben. We krijgen dus twee inputs namelijk "het stuur" en "de pedalen".
 
@@ -76,3 +76,22 @@ Ik zal deze in een BOM-List plaatsen.
 | 3 pins stuur| ST| ------| SparkFun-Connectors| Connectie met BB|
 | 3 pins throttle| TH| ------| SparkFun-Connectors| Connectie met BB|
 | Ground| GND| ------| supply1| 
+
+Nu kunnen we via de BOM-list beginnen met de PCB maken op Eagle. We zullen dus het schema eerst maken en dan de layout van de PCB.
+
+**Schema :**
+
+![alt text](Images/Schema_Correct.jpg)
+
+Dit is het schema dat we zullen achteermaken in Eagle. Voor we dit doen moeten we wel een beetje weten hoe en waar we onze componenten gaan plaatsen voor een mooie schematic te hebben. 
+
+We moeten nu eerst via de Bom-list onze nodige componenten gaan nemen. Eenmaal we dit hebben gedaan kunnen we beginnen met het maken van ons schema.
+
+[Schema van onze schakeling in Eagle](Project_PX2_Schema.pdf)
+
+Nu we ons schema hebben gemaakt zullen we ook nog een layout moeten maken zodat het een mooie en goeie PCB wordt. Hiervoor moeten we overschakelen naar Board. 
+Al onze componenten zullen daar al op staan maar je moet ze zelf nog in het vak slepen zodat je ze kan verbinden met elkaar en de juiste grootte van je PCB kan instellen.
+
+Voorbeeld van een board :
+
+![Voorbeeld board](<Images/Voorbeeld Board.png>)
