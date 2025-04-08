@@ -3,6 +3,7 @@ Doelstelling:
 Alles van de besturing op 1 Pcb zetten.
 
 We hebben dan een deel van de besturing die we laten zoals het is. Dit deeltje zullen we dan "BlackBox" noemen. We zullen er voor zorgen dat we dit op onze eigen PCB kunnen connecteren met Pinheaders (Male, Female). In volgende foto kan je zien wat we als blackbox gebruiken voor het maken van dezze PCB.
+
 ![BlackBox](Images/BlackBox.png)
 
 Voor onze PCB moeten we onze blackbox maken in EAGLE zodat we een beeld hebben van hoe we onze componenten op de pcb kunnen plaasten en waar precies zodat we genoeg plaats hebben. 
@@ -17,6 +18,7 @@ In volgende foto zal je zien dat we nu een footprint hebben getekend met de nodi
 ![Footprint die we op eagle hebben getekend](Images/Footprint_BB_eagle.png)
 
 Eenmaal je een footprint hebt moet je ook nog een symbol maken die erbij past. Hiervoor kijk je best eens naar het gene die op de blackbox is geconnecteerd. 
+
 ![BB pinnen aantonen die we nodig hebben ](Images/BB_Pinnen.png)
 
 De pinnen die zijn aangeduid in het **rode oppervlak** zijn de pinnen voor de batterij die is aangesloten.
@@ -49,8 +51,11 @@ De led heeft 3 pinnen maar we zullen gebruik maken van twee Leds in plaats van �
 Eenmaal we weten welke componenten we nodig hebben voor dit deeltje gaan we verder naar het volgende deeltje van de PCB.
 
 Namelijk een **RC-Filter :**
+
 ![RC-Filter](image.png)
+
 ![Schakeling voor onze controller](image-1.png)
+
 Zoals je kan zien maken we gebruik van twee RC-Filters omdat we bij beide inputs één nodig hebben. We krijgen dus twee inputs namelijk "het stuur" en "de pedalen".
 
 We zullen nu eerst eens onze componenten zoeken.  
