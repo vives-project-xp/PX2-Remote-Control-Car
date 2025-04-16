@@ -89,7 +89,7 @@ Dit is het schema dat we gaan opstellen in Eagle. Voordat we beginnen, moeten we
 
 Eerst gaan we via de BOM-lijst alle benodigde componenten verzamelen. Zodra we alles hebben, kunnen we starten met het maken van ons schema.
 
-
+[Schema Van ons Project](Project_PX2_Schema_JarnoBostyn.pdf)
 
 Nu we ons schema hebben opgesteld, moeten we ook de layout maken zodat we een mooie en goed werkende PCB krijgen. Hiervoor schakelen we over naar de Board-weergave in Eagle.
 
