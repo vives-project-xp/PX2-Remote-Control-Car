@@ -6,10 +6,9 @@ Verbinden van een stuur en pedalen met een Raspberry Pi en het signaal uitlezen.
 We zullen het stuur en de pedalen met een usb verbinden aan de raspberry pi (want er zit een usb verbinding op rapsberry pi).
 ![Raspberry Pi](/Besturing//Images/image-1.png)
 Om de ingangen van het stuur en pedalen uit te lezen hebben we een softwarebibliotheek nodig die de HID-apparaten ondersteunt voor op onze raspberry pi te kunnen programmeren.
-•	evdev (voor Linux HID-apparaten) eenvoudig en makkelijke implementatie
-•	pygame (heeft joystick-ondersteuning)
-•	hidapi (voor direct uitlezen van HID-apparaten) snelheid en efficiënt.
-
+•evdev (voor Linux HID-apparaten) eenvoudig en makkelijke implementatie
+•pygame (heeft joystick-ondersteuning)
+•hidapi (voor direct uitlezen van HID-apparaten) snelheid en efficiënt.
 
 Wij kunnen gebruik maken van evdev en hidapi voor het uitlezen van de HID-apparaten. De pygame kunnen we ook wel gebruiken maar de joystick ondersteuning hebben we niet nodig.
 We zullen de waarden van het stuur of de hoek dat we hebben moeten omzetten naar een PWM-signaal, want het zijn binaire waarden of signalen die we binnenkrijgen van het stuur en de pedalen.
@@ -17,8 +16,7 @@ We zullen de waarden van het stuur of de hoek dat we hebben moeten omzetten naar
 Word verbonden met een antenne van de auto zelf (microcontroller).
 ![ESP32](/Besturing/Images/image-2.png)
 
-
-**Pygame (programma voor Rp4)**
+## Pygame (programma voor Rp4)
 
 Pygame zorgt ervoor dat je eenvoudig de stuurhoek, pedalen en knoppen kunt uitlezen zonder gedoe met ruwe HID-data.
 
@@ -27,11 +25,13 @@ Pygame zorgt ervoor dat je eenvoudig de stuurhoek, pedalen en knoppen kunt uitle
 ```bash
 pip install pygame
 ```
+
 Controleer daarna of het goed werkt met:
 
 ```python
 python3 -c "import pygame; print(pygame.ver)"
 ```
+
 *Stap 2:* Controller herkennen en verbinden
 
 Je kunt eerst checken hoeveel joysticks/stuuren er zijn aangesloten:
@@ -50,17 +50,19 @@ for i in range(joystick_count):
     print(f"Joystick {i}: {joystick.get_name()}")
 
 ```
+
 Als het stuur correct wordt herkend, zie je zoiets als:
 (de volgende code is yaml)
+
 ```python
 Aantal joysticks gevonden: 1
 Joystick 0: Logitech G29 Driving Force Racing Wheel
-
 ```
 
 *Stap 3:* Stuur en pedalen uitlezen
 
 Gebruik deze code om de stuurhoek, gas, rem en koppeling live te lezen:
+
 ```python
 import pygame
 
@@ -98,8 +100,8 @@ try:
 except KeyboardInterrupt:
     print("\nAfsluiten...")
     pygame.quit()
-
 ```
+
 Hoe de data werkt
 
 get_axis(0) → Stuurpositie (-1.0 tot 1.0)
@@ -112,7 +114,7 @@ get_axis(1) → Koppeling (-1.0 tot 1.0, alleen op G29)
 
 get_button(n) → Knopstatus (1 als ingedrukt, anders 0)
 
-**Pygame is met een extra bib genaamd SDL2**
+## Pygame is met een extra bib genaamd SDL2
 
 SDL2 (Simple DirectMedia Layer 2) is een krachtige multimedia-bibliotheek die Pygame onder de motorkap gebruikt voor het werken met:
 
@@ -142,7 +144,8 @@ We zullen nu de code **per sectie** uitleggen.
 
 📜 Code uitleg per sectie
 
-**1. Importeren van de benodigde libraries**
+## 1. Importeren van de benodigde libraries
+
 ```python
 import pygame
 import time
@@ -155,7 +158,8 @@ import RPi.GPIO as GPIO  # Voor PWM-output
 
 + RPi.GPIO wordt gebruikt om PWM-signalen naar de Traxxas-zender te sturen via de GPIO-pinnen van de Raspberry Pi.
 
-**2. GPIO-instellingen voor PWM-output**
+## 2. GPIO-instellingen voor PWM-output
+
 ```python
 # GPIO-pinnen voor PWM
 PWM_PIN_STEERING = 18  # GPIO voor stuur
@@ -172,6 +176,7 @@ throttle_pwm = GPIO.PWM(PWM_PIN_THROTTLE, 50)
 steering_pwm.start(7.5)  # Neutrale positie
 throttle_pwm.start(7.5)
 ```
+
 Wat gebeurt hier?
 
 ✅ GPIO18 wordt gebruikt voor het sturen (PWM-signaal naar de Traxxas-zender).
@@ -184,7 +189,8 @@ Wat gebeurt hier?
 ✅ PWM wordt gestart op 50Hz, wat een standaard servo-frequentie is.
 ✅ Startwaarden worden op 7.5% duty cycle gezet, wat overeenkomt met de neutrale stand van een servo.
 
-**3. pygame initialiseren voor het Logitech G923 stuur**
+## 3. pygame initialiseren voor het Logitech G923 stuur
+
 ```python
 # pygame init
 pygame.init()
@@ -194,6 +200,7 @@ pygame.joystick.init()
 joystick = pygame.joystick.Joystick(0)
 joystick.init()
 ```
+
 Wat gebeurt hier?
 
 ✅ pygame.init() start pygame.
@@ -204,13 +211,15 @@ Wat gebeurt hier?
 
 ✅ joystick.init() initialiseert het stuur zodat we data kunnen uitlezen.
 
-**4. Functies om waarden om te zetten naar PWM**
+## 4. Functies om waarden om te zetten naar PWM
+
 ```python
 def scale(value, src_range, dst_range):
     """Schaal een waarde van een bronbereik naar een doelbereik."""
     (src_min, src_max), (dst_min, dst_max) = src_range, dst_range
     return dst_min + (float(value - src_min) / float(src_max - src_min)) * (dst_max - dst_min)
 ```
+
 Wat doet deze functie?
 
 Deze schaalt een inputwaarde naar een ander bereik.
@@ -218,7 +227,8 @@ Bijvoorbeeld: het stuur levert een waarde tussen -1 (links) en 1 (rechts), maar 
 De functie rekent automatisch om naar het juiste bereik.
 
 Initialisatie van de variabelen:
-```python 
+
+```python
 reverse_throttle = False # Variable om de richting van het gas bij te houden
 pwm_value = scale(-1, (-1, 1), (5, 10))  # -1 wordt omgezet naar 5% duty cycle
 pwm_value = scale(1, (-1, 1), (5, 10))   # 1 wordt omgezet naar 10% duty cycle
@@ -226,7 +236,9 @@ print(f"Steering PWM Value: {pwm_value_steering}")
 print(f"Throttle PWM Value: {pwm_value_throttle}")
 
 ```
+
 Nu maken we nog een functie aan voor de duty_cycle
+
 ```python
 def set_pwm(pwm, value):
     """Stuur een PWM-signaal (bijv. naar een servo) en retourneer de duty cycle"""
@@ -234,13 +246,15 @@ def set_pwm(pwm, value):
     pwm.ChangeDutyCycle(duty_cycle)
     return duty_cycle  # Geeft de berekende duty cycle terug
 ```
+
 Wat doet deze functie?
 
 + Neemt een stuur- of gaspedaalwaarde tussen -1 en 1.
 + Schaalt deze om naar PWM tussen 5% (min) en 10% (max).
 + Stuurt deze waarde naar de Raspberry Pi PWM-output.
 
-**5. De hoofdloop om alles te laten werken**
+## 5. De hoofdloop om alles te laten werken
+
 ```python
 try:
     print("G923-besturing actief...")
@@ -284,6 +298,7 @@ try:
 
         time.sleep(0.05)  # Voorkom CPU-overbelasting
 ```
+
 Wat gebeurt hier?
 
 ✅ while True: zorgt ervoor dat de code blijft draaien.
@@ -302,13 +317,15 @@ Wat gebeurt hier?
 
 ✅ time.sleep(0.05) voorkomt dat de CPU te hard belast wordt.
 
-**6. Netjes afsluiten bij een toetsenbordonderbreking**
+## 6. Netjes afsluiten bij een toetsenbordonderbreking
+
 ```python
 except KeyboardInterrupt:
     print("\nAfsluiten...")
     steering_pwm.stop()
     throttle_pwm.stop()
 ```
+
 Wat gebeurt hier?
 
 + Als je CTRL+C indrukt, stopt het script netjes.
@@ -316,7 +333,7 @@ Wat gebeurt hier?
 + GPIO wordt opgeschoond (GPIO.cleanup()), zodat andere programma’s geen problemen krijgen.
 + pygame wordt afgesloten (pygame.quit()).
 
-**🎯 Samenvatting**
+## 🎯 Samenvatting
 
 ✅ Leest Logitech G923 stuur & pedalen uit met pygame.
 
@@ -327,5 +344,3 @@ Wat gebeurt hier?
 ✅ Werkt zonder DAC, dus direct op de Raspberry Pi GPIO.
 
 ✅ Veilig afsluiten bij CTRL+C.
-
-
