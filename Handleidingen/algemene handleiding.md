@@ -180,3 +180,6 @@ Zorg ervoor dat alle hardware goed is aangesloten voordat je de Raspberry Pi van
 
 
 
+Lichten en knoppen monteren
+Monteer de lichten en knoppen en sluit alle kabels aan op de Raspberry Pi.
+Raadpleeg het Raspberry Pi-document voor meer uitleg over de aansluitingen.
