@@ -9,8 +9,8 @@ lc = LightControl()
 
 COM_PORT = '/dev/ttyS0'    # Gebruikte poort
 BAUD_RATE = 115200         # Baudrate van de seriële console
-TARGET_TAG    = "3000E280699500004014CC14" # Doel tag ID 1
-TARGET_TAG_2 = "3000E200420072C06017068E" # Doel tag ID 2
+TARGET_TAG    = "3000E280699500004014CC14" # Doel tag ID 1 (oranje auto)
+TARGET_TAG_2 = "3000E200420072C06017068E" # Doel tag ID 2 nog niet finale ID (rode auto)
 
 
 INVENTORY_CMD = bytes.fromhex("BB 00 22 00 00 22 7E")
@@ -97,6 +97,7 @@ while running:
     
     elapsed_ticks = pygame.time.get_ticks() - start_ticks if timer_running else 0
     
+    # Calculate elapsed time
     if timer_running and not timer_stopped:
         elapsed_seconds = elapsed_ticks // 1000
         elapsed_minutes = elapsed_seconds // 60
@@ -109,6 +110,8 @@ while running:
     if not auto2_stopped and timer_running:
         auto2_time = time_str
     
+    # Calculate current time for each car
+    # If the car is stopped, use the stop time; otherwise, use the elapsed time
     auto1_current = auto1_stop_ticks if auto1_stopped else (elapsed_ticks if timer_running else 0)
     auto2_current = auto2_stop_ticks if auto2_stopped else (elapsed_ticks if timer_running else 0)
     
@@ -119,6 +122,7 @@ while running:
         first_name, first_time = auto2_name, auto2_time
         second_name, second_time = auto1_name, auto1_time
     
+    # Check start button state
     if GPIO.input(23) == GPIO.LOW:
         lc.start_sequence()
         timer_running = True
@@ -131,6 +135,7 @@ while running:
         print("start")
         pygame.time.delay(200)
     
+    # Check reset button state
     if GPIO.input(25) == GPIO.LOW:
         lc.reset_lights()
         timer_running = False
@@ -167,6 +172,7 @@ while running:
         
         pygame.time.delay(3000)
     
+    # Draw the text on the screen
     title_text = font_large.render(f"Tijd: {time_str}", True, BLACK)
     first_text = font_small.render(f"1st  —  {first_name}  —  {first_time}", True, BLACK)
     second_text = font_small.render(f"2nd  —  {second_name}  —  {second_time}", True, BLACK)
@@ -175,6 +181,7 @@ while running:
     screen.blit(first_text, (WIDTH * 0.05, HEIGHT * 0.35))
     screen.blit(second_text, (WIDTH * 0.05, HEIGHT * 0.65))
     
+    # Check for events
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -183,6 +190,10 @@ while running:
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 running = False
+            elif event.key == pygame.K_1 and timer_running and not auto1_stopped:
+                auto1_stopped = True
+                auto1_stop_ticks = pygame.time.get_ticks() - start_ticks
+                auto1_time = time_str
             elif event.key == pygame.K_2 and timer_running and not auto2_stopped:
                 auto2_stopped = True
                 auto2_stop_ticks = pygame.time.get_ticks() - start_ticks
