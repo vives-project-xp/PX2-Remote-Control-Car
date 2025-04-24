@@ -1,2 +1,3 @@
 .venv
-DashboardPi.py
+new_Dashboard_lights.py
+new_Light_control.py
