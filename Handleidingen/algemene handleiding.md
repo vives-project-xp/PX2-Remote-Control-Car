@@ -22,6 +22,11 @@ Verbind de pedalen met het stuur en sluit ze aan op de meegeleverde stroomadapte
 3. Stuur verbinden
 Steek de USB-kabel van het stuur in een beschikbare USB-poort van de Raspberry Pi.
 
+<br>
+
+---
+<br>
+
 📷 2. Bril en Camera
 Benodigdheden:
 
@@ -50,6 +55,14 @@ Druk met een dun staafje op de 'Link'-knop van de bril. Je hoort een korte piept
 5. Koppeling voltooien
 Wacht tot de pieptoon stopt en het LED-lampje op de videocompiler groen oplicht.
 De bril en camera zijn nu gekoppeld, waardoor je het camerabeeld via de bril kunt bekijken.
+
+
+
+<br>
+
+---
+<br>
+
 
 🚗 3. Auto
 Benodigdheden:
@@ -97,6 +110,14 @@ Schakel de auto in. (Zorg dat dit gebeurt voordat je het plastic paneel terugpla
 9. Plastic paneel terugplaatsen
 Bevestig het plastic paneel terug op de auto.
 
+
+<br>
+
+---
+<br>
+
+
+
 💻 4. Start/finish systeem
 Benodigdheden:
 
@@ -136,6 +157,10 @@ Hiermee wordt de code op de Raspberry Pi geladen.
 
 
 
+<br>
+
+---
+<br>
 
 
 
@@ -180,6 +205,4 @@ Zorg ervoor dat alle hardware goed is aangesloten voordat je de Raspberry Pi van
 
 
 
-Lichten en knoppen monteren
-Monteer de lichten en knoppen en sluit alle kabels aan op de Raspberry Pi.
-Raadpleeg het Raspberry Pi-document voor meer uitleg over de aansluitingen.
+
