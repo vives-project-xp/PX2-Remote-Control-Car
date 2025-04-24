@@ -22,7 +22,9 @@ Dit project demonstreert hoe je met een Raspberry Pi en een **JRD-4035 UHF RFID-
 pip install pyserial
 ```
 
-### 2. Verbind de JRD-4035 module met de UART-poort van de Pi
+### 2. Verbind de JRD-4035 module met de UART-poort van de Piµ
+
+![pinout](./pinout.png)
 
 - TX van de module → RX van de Pi  
 - RX van de module → TX van de Pi  
