@@ -97,7 +97,7 @@ Schakel de auto in. (Zorg dat dit gebeurt voordat je het plastic paneel terugpla
 9. Plastic paneel terugplaatsen
 Bevestig het plastic paneel terug op de auto.
 
-💻 4. Circuit
+💻 4. Start/finish systeem
 Benodigdheden:
 
 - Monitor met stroomadapter
@@ -107,6 +107,7 @@ Benodigdheden:
 - Raspberry Pi met stroomadapter
 
 - Toetsenbord en muis
+
 
 Verbinding met een terminal
 
@@ -132,6 +133,52 @@ Voer het commando uit:
 
     `sudo python Dashboard_lights.py`
 Hiermee wordt de code op de Raspberry Pi geladen.
+
+
+
+
+
+
+🔧 5. Lichten en knoppen monteren & aansluiten
+Benodigdheden:
+- LED-lichten
+
+- Drukknoppen
+
+- Bekabeling (jumper wires)
+
+- Raspberry Pi
+
+- Schroevendraaier (indien nodig)
+
+- Frame
+
+- Raspberry Pi-document (voor aansluitinformatie)
+
+Stappen:
+
+1. Plaatsing op het frame
+Monteer de LED-lichten en knoppen stevig op het bijgeleverde frame. Zorg dat alles goed vastzit en toegankelijk blijft voor gebruik.
+
+2. Kabels voorbereiden
+Gebruik jumper wires om verbindingen te maken tussen de lichten, knoppen en de GPIO-pinnen van de Raspberry Pi.
+
+3. Aansluiten op de Raspberry Pi
+Sluit de kabels van de lichten en knoppen aan op de juiste GPIO-pinnen van de Raspberry Pi.
+📘 Raadpleeg het Raspberry Pi-document voor de juiste pin-layout en aansluiting.
+
+4. Controleer de verbindingen
+Dubbelcheck of alle verbindingen stevig en correct zijn aangesloten. Let op de richting en polariteit van de LED’s.
+
+5. Stroom aansluiten (pas als alles gemonteerd is)
+Zorg ervoor dat alle hardware goed is aangesloten voordat je de Raspberry Pi van stroom voorziet.
+
+
+
+
+
+
+
 
 Lichten en knoppen monteren
 Monteer de lichten en knoppen en sluit alle kabels aan op de Raspberry Pi.
