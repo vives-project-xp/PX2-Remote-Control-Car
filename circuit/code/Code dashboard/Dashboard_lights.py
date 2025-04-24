@@ -2,8 +2,18 @@ import pygame
 import time
 import RPi.GPIO as GPIO
 from light_control import LightControl
+import serial
+import time
 
 lc = LightControl()
+
+COM_PORT = '/dev/ttyS0'    # Gebruikte poort
+BAUD_RATE = 115200         # Baudrate van de seriële console
+TARGET_TAG    = "3000E280699500004014CC14" # Doel tag ID 1
+TARGET_TAG_2 = "3000E200420072C06017068E" # Doel tag ID 2
+
+
+INVENTORY_CMD = bytes.fromhex("BB 00 22 00 00 22 7E")
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_UP)
@@ -22,6 +32,7 @@ font_large = pygame.font.Font(None, HEIGHT // 5)
 font_small = pygame.font.Font(None, HEIGHT // 10)
 font_medium = pygame.font.Font(None, HEIGHT // 8)
 
+# Initialize variables
 start_ticks = 0
 time_str = "00:00.000"
 auto1_name = "Oranje auto"
@@ -35,9 +46,54 @@ auto2_stop_ticks = 0
 timer_stopped = 0
 timer_running = False
 
+def parse_tag_id(data):
+    # Check if the data is long enough and has the correct header
+    if len(data) < 6 or data[0] != 0xBB or data[2] != 0x22:
+        return None
+    
+    # Data length is two bytes (little-endian)
+    data_length = data[3]
+    
+    # Check if the packet is complete
+    if len(data) < 5 + data_length + 2:  # Header (5 bytes) + data + checksum (2)
+        return None
+    
+    # Tag ID is typically 12 bytes starting at index 10
+    tag_start = 6
+    tag_end = tag_start + 12
+    if tag_end > len(data) - 2:  # Ensure we don't exceed data and checksum
+        return None
+    
+    tag_bytes = data[tag_start:tag_end]
+    
+    return tag_bytes.hex().upper()
+
+
+ser = serial.Serial(COM_PORT, BAUD_RATE, timeout=1)
+print(f"Verbonden met {COM_PORT}")
+
 running = True
 while running:
     screen.fill(WHITE)
+    
+    ser.write(INVENTORY_CMD)
+        
+    # Read response
+    buffer = ser.read(ser.in_waiting or 1)
+        
+    if buffer:
+        tag = parse_tag_id(buffer)
+        if tag:
+            if tag == TARGET_TAG and timer_running and not auto1_stopped:
+                auto1_stopped    = True
+                auto1_stop_ticks = pygame.time.get_ticks() - start_ticks
+                auto1_time       = time_str
+            elif tag == TARGET_TAG_2 and timer_running and not auto2_stopped:
+                auto2_stopped = True
+                auto2_stop_ticks = pygame.time.get_ticks() - start_ticks
+                auto2_time = time_str
+
+
     
     elapsed_ticks = pygame.time.get_ticks() - start_ticks if timer_running else 0
     
@@ -127,10 +183,6 @@ while running:
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 running = False
-            elif event.key == pygame.K_1 and timer_running and not auto1_stopped:
-                auto1_stopped = True
-                auto1_stop_ticks = pygame.time.get_ticks() - start_ticks
-                auto1_time = time_str
             elif event.key == pygame.K_2 and timer_running and not auto2_stopped:
                 auto2_stopped = True
                 auto2_stop_ticks = pygame.time.get_ticks() - start_ticks
@@ -141,3 +193,4 @@ while running:
 GPIO.cleanup()
 pygame.quit()
 lc.cleanup()
+ser.close()
