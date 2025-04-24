@@ -26,6 +26,8 @@ pip install pyserial
 
 ![pinout](./pinout.png)
 
+![rfid](./rfid.png)
+
 - TX van de module → RX van de Pi  
 - RX van de module → TX van de Pi  
 - GND → GND  
