@@ -1,5 +1,6 @@
-## Pcb maken 
-Doelstelling: 
+## Pcb maken
+
+Doelstelling:
 Alles van de besturing op 1 Pcb zetten.
 
 Een deel van de besturing laten we gewoon zoals het is – dat stuk noemen we voortaan de "BlackBox". We zorgen ervoor dat we deze BlackBox makkelijk kunnen aansluiten op onze eigen PCB via pinheaders (male/female). Op de volgende foto zie je welk onderdeel we gebruiken als BlackBox bij het ontwerpen van deze PCB.
@@ -55,29 +56,28 @@ Namelijk een **RC-Filter :**
 
 ![RC_Filter](Images/RC_Filter.png)
 
-![BreadBoard](<Images/RC_Filter op BreadBoard.png>)
+![BreadBoard](Images/RC_Filter op BreadBoard.png)
 
 Zoals je kan zien, maken we gebruik van twee RC-filters – eentje voor elke input. We hebben namelijk twee ingangen: eentje voor het stuur en eentje voor de pedalen.
 
 Nu gaan we eerst op zoek naar de juiste componenten.
 Ik zal deze verzamelen in een BOM-lijst (Bill of Materials), zodat we een duidelijk overzicht hebben van wat we allemaal nodig hebben.
 
-| Component       | Naam   | Waarde  | Library (Eagle)      | Beschrijving                                |
-|-----------------|--------|---------|----------------------|---------------------------------------------|
-| Weerstand       | R1     | 1kΩ     | rcl (R0603)          | Gebruikt in RC-filter                       |
-| Weerstand       | R2     | 1kΩ     | rcl (R0603)          | Gebruikt in RC-filter                       |
-| Condensator     | C1     | 10µF    | rcl (C1210)          | Voor signaal filtering                      |
-| Condensator     | C2     | 10µF    | rcl (C1210)          | Voor signaal filtering                      |
-| Rode LED        | Rled   | ---     | led                  | Aantonen batterijniveau van de controller   |
-| Groene LED      | Gled   | ---     | led                  | Aantonen batterijniveau van de controller   |
-| Drukknop        | S1     | ---     | switch-omron         | Wordt gebruikt als reset                    |
-| 40 female pins  | J1     | ---     | PPPC202LFBN-RC       | Connector met PI 5                          |
-| 6 female pins   | J2     | ---     | 6 pins_target        | Connectie met de BlackBox (BB)              |
-| Batterij        | BAT    | ---     | SparkFun-Connectors  | Connectie met de batterij                   |
-| 3 pins stuur    | ST     | ---     | SparkFun-Connectors  | Connectie met de BlackBox (BB)              |
-| 3 pins throttle | TH     | ---     | SparkFun-Connectors  | Connectie met de BlackBox (BB)              |
-| Ground          | GND    | ---     | supply1              | Aarding                                     |
-
+| Component       | Naam | Waarde | Library (Eagle)     | Beschrijving                              |
+| --------------- | ---- | ------ | ------------------- | ----------------------------------------- |
+| Weerstand       | R1   | 1kΩ   | rcl (R0603)         | Gebruikt in RC-filter                     |
+| Weerstand       | R2   | 1kΩ   | rcl (R0603)         | Gebruikt in RC-filter                     |
+| Condensator     | C1   | 10µF  | rcl (C1210)         | Voor signaal filtering                    |
+| Condensator     | C2   | 10µF  | rcl (C1210)         | Voor signaal filtering                    |
+| Rode LED        | Rled | ---    | led                 | Aantonen batterijniveau van de controller |
+| Groene LED      | Gled | ---    | led                 | Aantonen batterijniveau van de controller |
+| Drukknop        | S1   | ---    | switch-omron        | Wordt gebruikt als reset                  |
+| 40 female pins  | J1   | ---    | PPPC202LFBN-RC      | Connector met PI 5                        |
+| 6 female pins   | J2   | ---    | 6 pins_target       | Connectie met de BlackBox (BB)            |
+| Batterij        | BAT  | ---    | SparkFun-Connectors | Connectie met de batterij                 |
+| 3 pins stuur    | ST   | ---    | SparkFun-Connectors | Connectie met de BlackBox (BB)            |
+| 3 pins throttle | TH   | ---    | SparkFun-Connectors | Connectie met de BlackBox (BB)            |
+| Ground          | GND  | ---    | supply1             | Aarding                                   |
 
 Nu we de BOM-lijst hebben, kunnen we beginnen met het maken van de PCB in Eagle. We starten met het tekenen van het schema en daarna gaan we verder met de layout van de PCB.
 
@@ -95,10 +95,9 @@ Nu we ons schema hebben opgesteld, moeten we ook de layout maken zodat we een mo
 
 Alle componenten die we nodig hebben, zullen daar al staan, maar je moet ze zelf in het werkgebied slepen. Daarna kun je ze met elkaar verbinden en de juiste grootte van je PCB instellen.
 
-
 Voorbeeld van een board :
 
-![Voorbeeld board](<Images/Voorbeeld Board.png>)
+![Voorbeeld board](Images/Voorbeeld Board.png)
 
 Aan het voorbeeld kun je zien hoe de componenten ongeveer op het board verschijnen. Nu we dat hebben, moeten we ze op het board zelf plaatsen en ervoor zorgen dat ze dicht bij de andere componenten staan waarmee ze verbonden moeten worden.
 
