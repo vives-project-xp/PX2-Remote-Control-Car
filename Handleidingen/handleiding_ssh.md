@@ -21,8 +21,8 @@ Deze handleiding beschrijft hoe je je Raspberry Pi op afstand kunt bedienen via 
      ```
 
      Zoek het `inet`-adres onder de `wlan0` sectie; dit is je IP-adres.
-     
-    ![config](./afb/ipconfig.png)
+
+    ![config](/Handleidingen/Images/ipconfig.png)
 
    - Voer het volgende commando uit om je gebruikersnaam te achterhalen:
 
@@ -49,7 +49,7 @@ Deze handleiding beschrijft hoe je je Raspberry Pi op afstand kunt bedienen via 
 
    - Nu ben je verbonden
 
-   ![terminal](./afb/px2rasp.png)
+   ![terminal](/Handleidingen/Images/px2rasp.png)
 
 3. **Als de verbinding niet lukt (bijvoorbeeld `ssh: connect to host IP-adres port 22: Connection timed out`):**
    - Start de SSH-service op de Raspberry Pi met de volgende commando's:
@@ -66,12 +66,12 @@ Deze handleiding beschrijft hoe je je Raspberry Pi op afstand kunt bedienen via 
    - Ga naar de extensies-sectie en zoek naar `Remote-SSH`.
    - Klik op `Install` om de extensie te installeren.
 
-   ![extension](./afb/extension.png)
+   ![extension](/Handleidingen/Images/extension.png)
 
 2. **Maak verbinding met de Raspberry Pi:**
    - Klik op de blauwe pijltjes linksonder in Visual Studio Code.
 
-   ![knop](./afb/blauwe_knop.png)
+   ![knop](/Handleidingen/Images/blauwe_knop.png)
 
    - Selecteer `Connect to Host...` en vervolgens `Add New SSH Host...`.
    - Voer het SSH-commando in het volgende formaat in:
@@ -83,7 +83,7 @@ Deze handleiding beschrijft hoe je je Raspberry Pi op afstand kunt bedienen via 
      Vervang `gebruikersnaam` door je Raspberry Pi-gebruikersnaam en `IP-adres` door het IP-adres van je Raspberry Pi.
 
    - Kies het configuratiebestand waarin je de SSH-configuratie wilt opslaan (meestal de bovenste optie).
-   ![configure](./afb/conf_file.png)
+   ![configure](/Handleidingen/Images/conf_file.png)
    - Klik opnieuw op het blauwe pijltje linksonder en selecteer de zojuist toegevoegde host om verbinding te maken.
    - Kies het besturingssysteem van de Raspberry Pi (`Linux`) en voer je wachtwoord in wanneer daarom wordt gevraagd.
 
@@ -92,7 +92,7 @@ Deze handleiding beschrijft hoe je je Raspberry Pi op afstand kunt bedienen via 
 
    - Zorg ervoor dat je Test Explorer opent in Visual Studio Code, anders worden de .py-bestanden mogelijk niet gevonden.
 
-   ![resultaat](./afb/resultaat.jpg)
+   ![resultaat](/Handleidingen/Images/resultaat.jpg)
 
 ## Conclusie
 
