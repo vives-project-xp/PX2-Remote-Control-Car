@@ -85,6 +85,8 @@ Nu we de BOM-lijst hebben, kunnen we beginnen met het maken van de PCB in Eagle.
 
 ![alt text](Images/Schema_Correct.jpg)
 
+![alt text](Images/Schema%20besturing.png)
+
 Dit is het schema dat we gaan opstellen in Eagle. Voordat we beginnen, moeten we eerst goed nadenken over waar en hoe we onze componenten gaan plaatsen, zodat het schema overzichtelijk en logisch is.
 
 Eerst gaan we via de BOM-lijst alle benodigde componenten verzamelen. Zodra we alles hebben, kunnen we starten met het maken van ons schema.
