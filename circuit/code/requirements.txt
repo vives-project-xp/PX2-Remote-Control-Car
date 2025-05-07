@@ -1,0 +1,5 @@
+pygame
+RPi.GPIO
+pyserial
+adafruit-circuitpython-neopixel
+adafruit-blinka

@@ -4,6 +4,15 @@
 
 Voor lichten en dashboard hebben we 2 code bestanden Dashboard_lights.py en light_control.py. Voor het programma te laten draaien moet je alleen Dashboard_lights.py runnen, hiermee zullen lichten, geluid en dashboard werken.
 
+## Dependencies
+
+Om de code te gebruiken moet je een aantal python libraries installeren op de pi. Deze bevinden zich in requirements.txt. 
+Voor de dependencies snel te installeren kan je volgend command gebruiken in de terminal.
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Uitleg code
 
 ### light_control.py
