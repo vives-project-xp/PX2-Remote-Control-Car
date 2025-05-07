@@ -2,7 +2,7 @@
 
 ## Hoe gebruiken
 
-Voor lichten en dashboard hebben we 2 code bestanden Dashboard_lights.py en light_control.py. Voor het programma te laten draaien moet je alleen Dashboard_lights.py runnen, hiermee zullen lichten en dashboard werken.
+Voor lichten en dashboard hebben we 2 code bestanden Dashboard_lights.py en light_control.py. Voor het programma te laten draaien moet je alleen Dashboard_lights.py runnen, hiermee zullen lichten, geluid en dashboard werken.
 
 ## Uitleg code
 
@@ -68,23 +68,23 @@ In dit codebestand wordt de RFID ingeleven en wordt ook het dashboard aangemaakt
 #### initializeer variabelen
 
 ```python
-start_ticks = 0  # Houdt de starttijd bij (in milliseconden) wanneer de timer begint
-time_str = "00:00.000"  # Stringrepresentatie van de verstreken tijd in minuten, seconden en milliseconden
-auto1_name = "Oranje auto"  # Naam van de eerste auto (Oranje auto)
-auto2_name = "Rode auto"  # Naam van de tweede auto (Rode auto)
-auto1_time = "00:00.000"  # Verstreken tijd voor de eerste auto (wordt bijgewerkt tijdens de timer of wanneer gestopt)
-auto2_time = "00:00.000"  # Verstreken tijd voor de tweede auto (wordt bijgewerkt tijdens de timer of wanneer gestopt)
-auto1_stopped = False  # Boolean die aangeeft of de eerste auto is gestopt
-auto2_stopped = False  # Boolean die aangeeft of de tweede auto is gestopt
-auto1_stop_ticks = 0  # Houdt de tijd bij (in milliseconden) waarop de eerste auto is gestopt
-auto2_stop_ticks = 0  # Houdt de tijd bij (in milliseconden) waarop de tweede auto is gestopt
+start_ticks = 0  # Houdt de starttijd bij wanneer de timer begint
+time_str = "00:00.000"  #verstreken tijd in minuten, seconden en milliseconden
+auto1_name = "Oranje auto"  # Naam van auto 1(Oranje auto)
+auto2_name = "Rode auto"  # Naam van auto 2(Rode auto)
+auto1_time = "00:00.000"  # Verstreken tijd voor auto 1
+auto2_time = "00:00.000"  # Verstreken tijd voor auto  2
+auto1_stopped = False  # Boolean die aangeeft of auto 1 is gestopt
+auto2_stopped = False  # Boolean die aangeeft of auto 2 is gestopt
+auto1_stop_ticks = 0  # Houdt de tijd bij waarop auto 1 is gestopt
+auto2_stop_ticks = 0  # Houdt de tijd bij waarop auto 2 is gestopt
 timer_stopped = 0  # Boolean die aangeeft of de timer is gestopt
 timer_running = False  # Boolean die aangeeft of de timer momenteel loopt
 ```
 
 #### parse_tag_id
 
-Deze functie zet de ontvangen data van de RFID lezer om naar een tag ID moest deze aanwezig zijn. Deze wordt dan verder in de code gebruikt om te vergelijken met een target tag waar elke auto 1 van heeft.
+Deze functie zet de ontvangen data van de RFID lezer om naar een tag ID moest deze aanwezig zijn. Deze wordt dan verder in de code gebruikt om te vergelijken met een target tag waar elke auto 1 van heeft. De tag is verschillend per auto om ze zo van elkaar te onderscheiden.
 
 ```python
 def parse_tag_id(data):
@@ -112,3 +112,6 @@ def parse_tag_id(data):
     return tag_bytes.hex().upper()
 ```
 
+De rest van de code wordt uitgelegd in de codebestanden zelf in comments
+[light_control.py](light_control.py)
+[Dashboard_lights.py](Dashboard_lights.py)
