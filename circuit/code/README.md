@@ -2,15 +2,17 @@
 
 ## Contents
 
-In deze folder bevindt zich de code voor het dashboard en de lichten aan te sturen. Dit zijn de 2 bestanden [Dashboard_lights.py](Dashboard_lights.py) en [light_control.py](./light_control.py). Verder zitten ook de geluidsbestanden [long_beep.wav](./long_beep.wav) en [smal_Beep.wav](smal_Beep.wav) in deze folder.
+In deze folder bevindt zich de code voor het dashboard en de lichten aan te sturen. Dit zijn de 2 bestanden [Dashboard_lights.py](Dashboard_lights.py) en [light_control.py](./light_control.py).
+Verder zitten ook de geluidsbestanden [long_beep.wav](./long_beep.wav) en [smal_Beep.wav](smal_Beep.wav) in deze folder.
 
 ## Hoe gebruiken
 
-Voor het programma te laten draaien moet je alleen Dashboard_lights.py runnen, hiermee zullen lichten, geluid en dashboard werken. Beide bestanden moeten in dezelfde folder staan op een raspi 4. Verder moet je ook de bestanden long_beep.wav en smal_beep.wav in dezelfde folder hebben als de code bestanden.
+Voor het programma te laten draaien moet je alleen Dashboard_lights.py runnen, hiermee zullen lichten, geluid en dashboard werken.
+Beide bestanden moeten wel in dezelfde folder staan op een raspi 4 samen met de 2 geluidsbestanden.
 
 ## Dependencies
 
-Om de code te gebruiken moet je een aantal python libraries installeren op de pi. Deze bevinden zich in requirements.txt. 
+Om de code te gebruiken moet je een aantal python libraries installeren op de pi. Deze bevinden zich in requirements.txt.
 Voor de dependencies snel te installeren kan je volgend command gebruiken in de terminal.
 
 ```bash
@@ -21,7 +23,8 @@ pip install -r requirements.txt
 
 ### light_control.py
 
-In dit bestand wordt de class LightControl gemaakt. Deze wordt dan in Dashboard_lights.py gebruikt voor de lichten aan te sturen. De class heeft een aantal functies die nodig zijn voor alles te laten werken.
+In dit bestand wordt de class LightControl gemaakt. Deze wordt dan in Dashboard_lights.py gebruikt voor de lichten aan te sturen.
+De class heeft een aantal functies die nodig zijn voor alles te laten werken.
 
 #### start_sequence
 
