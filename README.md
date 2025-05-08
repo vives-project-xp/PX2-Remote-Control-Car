@@ -21,7 +21,7 @@ We hebben de opdracht gekregen een FPV RC car te maken door een RC car omtevorme
 - [Besturing](./Besturing/README.md): Hier bevindt zich alles over de besturing van de auto's.
 - [Circuit](./circuit/README.md): Hier bevindt zich de code, research, documentatie en foto's over het circuit.
 - [Documentatie](./Documentatie/README.md): Hier bevindt zich documentatie zoals BOM en architectuur document.
-- filmpjes: Hier bevinden zich een aantal filmpjes over het project.
+- [filmpjes](./filmpjes/README.md): Hier bevinden zich een aantal filmpjes over het project.
 - [Handleidingen](./Handleidingen/README.md): Hier bevinden zich handleidingen over hoe je het zelf kan doen.
 - [Presentaties](./presentaties/README.md): Hier bevinden zich de presentaties die gegeven werden voor school.
 - [Video](./Video/README.md): Hier bevindt zich alles over de gebruikte VR bril.
