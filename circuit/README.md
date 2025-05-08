@@ -26,4 +26,7 @@ Voeg het schema diagram van het circuit toe. Je kunt een afbeelding of een link 
 
 ## Circuit Beschrijving
 
-Via (RFID en 2 schermen) de tijden en ronden bijhouden, evenals het start signaal en lichten bedienen (via Raspberry Pi).
+Het circuit bestaat uit een Raspberry Pi, een LED-strip, een geluidsmodule en een aantal knoppen.
+De Raspberry Pi is verantwoordelijk voor het aansturen van de LED-strip, het afspelen van geluiden en het tonen van dashboard op een display.
+De knoppen worden gebruikt om de start- en stopfuncties te activeren.
+De LED-strip geeft visuele feedback aan de gebruiker, terwijl de geluidsmodule geluidseffecten afspeelt om de ervaring te verbeteren.

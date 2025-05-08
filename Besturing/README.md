@@ -16,7 +16,7 @@ Hierin staat alle nodige info over de besturing.
 
 ## uitleg code
 
-Beide codebestanden kunnen gebruikt worden voor het stuur en de pedalen aan te sturen. 
+Beide codebestanden kunnen gebruikt worden voor het stuur en de pedalen aan te sturen.
 Hierbij wordt er een spanning, die verkregen wordt door het bewegen van stuur of indrukken van pedalen, omgezet naar een PWM signaal naar de auto die op zijn beurt het signaal verwerkt.
 
 Autostart.md is een uitleg voor de code op de achtergrond te laten draaien van de pi bij het opstarten.

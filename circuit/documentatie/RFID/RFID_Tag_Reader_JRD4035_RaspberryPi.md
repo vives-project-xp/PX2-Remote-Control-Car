@@ -18,6 +18,7 @@ Dit project demonstreert hoe je met een Raspberry Pi en een **JRD-4035 UHF RFID-
 ## Installatie
 
 ### 1. Installeer Python-pakket
+
 ```bash
 pip install pyserial
 ```
@@ -42,6 +43,7 @@ pip install pyserial
 
 Meestal is dit: `/dev/ttyS0` of `/dev/serial0`  
 Controleer via:
+
 ```bash
 ls /dev/tty*
 ```
@@ -49,11 +51,13 @@ ls /dev/tty*
 **Gebruik ttyS0 (mini-UART):**
 
 Schakel de seriële console uit:
+
 ```bash
 sudo raspi-config
 ```
 
 Ga naar:
+
 - Interfacing Options > Serial  
 - *"Would you like a login shell to be accessible over serial?"* → **Nee**  
 - *"Would you like the serial port hardware to be enabled?"* → **Ja**
@@ -134,7 +138,7 @@ finally:
 
 ## Voorbeeldoutput
 
-```
+```bash
 Verbonden met /dev/ttyS0  
 Ruwe data: BB02220011BB3000E280699500004014CC14786227580D7E  
 Gedetecteerde Tag ID: BB3000E280699500004014CC

@@ -1,20 +1,24 @@
-# Benodigheden:
+# Benodigheden
+
 1. **LED's knipperen** na het uitgaan (5 seconden).
 2. **Buzzer** die geluid maakt tijdens het aftellen.
 3. **Startsignaal** voor 2 seconden aan het eind.
 
-### Benodigdheden:
+## Benodigdheden
+
 - **Buzzer** (bijvoorbeeld een actieve piezo buzzer).
 - **LED's** (
 - **Weerstand voor de buzzer** (meestal niet nodig voor actieve buzzers).
 - **Extra GPIO-pin** voor de buzzer (bijv. GPIO 13).
 
-### Stappen:
+### Stappen
 
 #### 1. **Sluit de buzzer aan**
+
 Sluit de buzzer aan op een vrije GPIO-pin, bijvoorbeeld GPIO13. Verbind de positieve kant van de buzzer naar de GPIO en de negatieve kant naar de GND van de Raspberry Pi.
 
 #### 2. **Pas de code aan**
+
 Hier is de aangepaste code die de buzzer laat aftellen samen met de LED's en daarna het startsignaal geeft:
 
 ```python
@@ -93,28 +97,33 @@ finally:
 ```
 
 ### Wat doet de code?
+
 1. **LED's één voor één aanzetten**: Zoals in je oorspronkelijke vraag.
 2. **Na het uitgaan van de LED's**:
    - De LED's beginnen 5 seconden lang te knipperen, waarbij de buzzer elke keer mee piept (knippert samen met de LED's).
 3. **Startsignaal**:
    - Na de knipperperiode van 5 seconden worden de LED's opnieuw 5 keer aangestoken met de buzzer die ook mee piept. Dit is je startsignaal, dat 2 seconden duurt.
 
-### Uitleg van de nieuwe functies:
+### Uitleg van de nieuwe functies
+
 - **`buzzer_on()` en `buzzer_off()`**: Functies om de buzzer aan en uit te zetten.
 - **`leds_blinking()`**: Laat de LED's knipperen gedurende 5 seconden, samen met de buzzer die geluid maakt.
 - **`start_signal()`**: Start de LED's en buzzer voor 5 keer knipperen en wacht dan 2 seconden voor een startsignaal.
 
-### Testen:
+### Testen
+
 sluit alles aan en voer het script uit:
 
 ```bash
 python3 leds_buzzer.py
 ```
+
 ---
 
 ---
 
 ## 🔧 **Benodigdheden**
+
 1. **Raspberry Pi** (bijv. Raspberry Pi 4 of Zero W)  
 2. **WS2812B LED-strip (Neopixel)** (minstens 5 LED’s)  
 3. **Buzzer** (actieve piezo-buzzer, 5V)  
@@ -125,6 +134,7 @@ python3 leds_buzzer.py
 ---
 
 ## 🔌 **Stap 1: Aansluiten van de hardware**
+
 | LED-strip | Raspberry Pi |
 |-----------|--------------|
 | **DIN (Data In)** | **GPIO 18 (PWM)** |
@@ -137,26 +147,34 @@ python3 leds_buzzer.py
 | **- (Negatief)** | **GND** |
 
 ⚠️ **LET OP:**  
+
 - Gebruik **een aparte 5V-voeding** voor de LED-strip als je **meer dan 10 LED’s** hebt.  
 - **GND’s van de voeding en de Raspberry Pi moeten verbonden zijn!**  
 
 ---
 
 ## 💾 **Stap 2: Software installeren**
+
 1. Open een terminal op de Raspberry Pi en installeer de WS2812B-bibliotheek:
+
    ```bash
    sudo pip3 install rpi_ws281x adafruit-circuitpython-neopixel
    ```
 
 2. Schakel de audio-uitgang uit (deze gebruikt dezelfde PWM-pin als de LED-strip):
+
    ```bash
    sudo nano /boot/config.txt
    ```
+
    Voeg deze regel toe (of wijzig als die er al staat):
-   ```
+
+   ```bash
    dtparam=audio=off
    ```
+
    Sla op (Ctrl + X → Y → Enter) en herstart:
+
    ```bash
    sudo reboot
    ```
@@ -164,6 +182,7 @@ python3 leds_buzzer.py
 ---
 
 ## 🖥 **Stap 3: Code voor startlichten**
+
 Hier is de volledige code. Kopieer en plak deze in een nieuw Python-bestand:  
 
 ```python
@@ -230,13 +249,17 @@ finally:
 ---
 
 ## ▶️ **Stap 4: Programma uitvoeren**
+
 1. Sla de code op als `startlichten.py`:
+
    ```bash
    nano startlichten.py
    ```
+
    **Plak de code en sla op** (Ctrl + X → Y → Enter).  
 
 2. Voer het programma uit:
+
    ```bash
    python3 startlichten.py
    ```
@@ -244,6 +267,7 @@ finally:
 ---
 
 ## 🚦 **Wat gebeurt er?**
+
 1. **LED's gaan één voor één rood aan** (0.5 sec per LED) met een **korte buzzerpiep per LED**.  
 2. **Na 3 seconden gaan alle LED's uit**.  
 3. **De buzzer klinkt 1 seconde als startsignaal**.  
@@ -252,19 +276,21 @@ finally:
 ---
 
 ## 🛠 **Mogelijke uitbreidingen**
+
 🔹 **Meer LED’s?** Pas `LED_COUNT = X` aan.  
 🔹 **Andere kleuren?** Verander `(255, 0, 0)` naar bijvoorbeeld `(0, 0, 255)` voor blauw.  
 🔹 **Andere timing?** Pas de `time.sleep()` waarden aan.  
 
 ---
 
-# nu met rfid geintegreerd
+## u met rfid geintegreerd
 
 We gaan het **F1-startlichtsysteem**, **RFID-timing** en **twee HDMI-schermen** combineren in één geïntegreerde code.  
 
 ---
 
 ## 🚦 **Wat gaat het script doen?**  
+
 1. **Startprocedure**:  
    - LED’s gaan één voor één rood aan.  
    - Buzzer piept bij elke LED.  
@@ -276,7 +302,8 @@ We gaan het **F1-startlichtsysteem**, **RFID-timing** en **twee HDMI-schermen** 
 
 ---
 
-## 🔧 **Benodigdheden**  
+### 🔧**Benodigdheden**
+
 1. **Raspberry Pi 4** met **twee HDMI-schermen**.  
 2. **Adreseerbare WS2812B LED’s** (op GPIO 18).  
 3. **Actieve buzzer** (op GPIO 13).  
@@ -286,6 +313,7 @@ We gaan het **F1-startlichtsysteem**, **RFID-timing** en **twee HDMI-schermen** 
 ---
 
 ## 🖥 **Code: F1-start + RFID-timing op 2 schermen**
+
 ```python
 import time
 import board
@@ -394,6 +422,7 @@ except KeyboardInterrupt:
 ---
 
 ## 🚀 **Wat gebeurt er?**
+
 1. **Startprocedure**  
    - LED’s gaan **één voor één aan**.  
    - Buzzer piept bij elke LED.  
@@ -406,25 +435,20 @@ except KeyboardInterrupt:
 ---
 
 ## 🔥 **Hoe te starten?**
+
 1. **Sluit alles aan** (RFID, LED's, buzzer, HDMI-schermen).  
 2. **Start het script** met:  
+
    ```bash
    python3 f1_start_rfid.py
    ```
+
 3. **Plaats een RFID-tag op de lezer** → Scherm toont rondetijd!  
 
 ---
 
 ### ✅ **Extra mogelijkheden**  
+
 - **Laptijden opslaan naar CSV** voor analyse?  
 - **Schermen een race-timer laten tonen**?  
 - **Meerdere auto’s toevoegen** (tot 4 schermen met extra Pi’s!)?  
-
-
-
-
-
-
-
-
-
