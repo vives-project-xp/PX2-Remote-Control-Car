@@ -3,8 +3,7 @@
 ## bedoelingen
 
 - voor de camera
-- esp32(mogelijkheid)
-- stappenmotor(mogelijkheid)
+
 
 ## Mogelijke oplossing
 
@@ -12,15 +11,7 @@ Is door gebruik te maken van een zelfgemaakte batterypack of een batterij met ee
 
 ## Gekozen oplossing
 
-We hebben gekozen om een bosh 12V accupack te gebruiken. We zouden deze gebruiken omdat die batterijen ook nog in andere projecten kunnen gebruiken.
-
-![Bosch batterij](/Video/afbeeldingen/Bosh%20batterij.jpg)
-
-Voor die batterij moesten we ook nog een adapter voorzien om mooi de spanning te kunnen aftapen en hiervoor maken we gebruik van een adapter van bosch zelf.
-
-![Bosch adapter](/Video/afbeeldingen/Bosch%20adapter.jpeg)
-
-De batterij kan een spanning van 12V leveren en 3Ah.
+We hebben gekozen voor van de batterij van de auto af te tappen. We wouden eerst met een aparte batterij werken maar 1 van de onderdelen is niet meer beschikbaar. De batterij van de auto voorziet een spanning van 7.4V. Dit is wat aan de lage kant omdat de camera minstens een voedingspanning moet hebben van 6V. Dus zullen we de batterij van de auto tijdig veranderen. 
 
 ## Elektrisch schema
 
