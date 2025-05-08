@@ -13,7 +13,7 @@ Hierin vind je meer info van wat er in welke handleiding staat.
 
 ## Uitleg map
 
-### algemene handleidin
+### algemene handleiding
 Dit document bevat een stapsgewijze uitleg over hoe je elk onderdeel van het project kunt opzetten. De instructies zijn zo eenvoudig geschreven dat zelfs iemand zonder voorkennis ermee aan de slag kan.
 
 ### Besturing+ installatie pygame
