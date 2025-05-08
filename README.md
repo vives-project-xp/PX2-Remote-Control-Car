@@ -24,4 +24,4 @@ We hebben de opdracht gekregen een FPV RC car te maken door een RC car omtevorme
 - [filmpjes](./filmpjes/): Hier bevinden zich een aantal filmpjes over het project.
 - [Handleidingen](./Handleidingen/README.md): Hier bevinden zich handleidingen over hoe je het zelf kan doen.
 - [Presentaties](./presentaties/): Hier bevinden zich de presentaties die gegeven werden voor school.
-- [Video](./Video/README.md): Hier bevindt zich alles over de gebruikte VR bril.
+- [Video](./Video/README.md): Hier bevindt zich alles over de gebruikte VR bril en camera.

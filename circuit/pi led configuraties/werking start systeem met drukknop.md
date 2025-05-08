@@ -1,6 +1,9 @@
+# Werking van een F1-startlicht met RFID-timing en twee schermen
+
 Laten we vanaf het begin beginnen en alles stap voor stap uitleggen, zodat je een compleet systeem hebt met een F1-startlicht, RFID-timing, en twee aparte schermen met een fysieke start- en resetknop. We zullen de benodigde hardware en code doorlopen.
 
-### Benodigde Hardware:
+## Benodigde Hardware
+
 1. **Raspberry Pi (bijv. Raspberry Pi 4)**
 2. **RFID lezer (bijv. MFRC522)**
 3. **Adresserbare LED-strips (bijv. WS2812)**
@@ -10,7 +13,8 @@ Laten we vanaf het begin beginnen en alles stap voor stap uitleggen, zodat je ee
 7. **Weerstanden** voor de drukknoppen (meestal 10kΩ)
 8. **Jumper draadjes** en een **breadboard** voor de aansluitingen
 
-### Aansluitingen:
+### Aansluitingen
+
 1. **RFID Lezer (MFRC522)**:
    - VCC naar 3.3V
    - GND naar GND
@@ -196,21 +200,25 @@ except KeyboardInterrupt:
 
 ---
 
-### Uitleg van de Code:
+### Uitleg van de Code
+
 - **F1 Startlicht en Buzzer**: De `start_lights()` functie simuleert de F1 startprocedure, waarbij LED's en buzzer samen werken. Na de startlicht sequentie, klinkt er een geluid voor 1 seconde om het begin van de race aan te geven.
 - **RFID Timing**: De `scan_rfid()` functie registreert de tijden van de auto's op basis van hun RFID-tag. De tijden worden opgeslagen en weergegeven op twee verschillende schermen.
 - **Resetknop**: De resetknop zorgt ervoor dat de tijden en schermen worden gewist en alles opnieuw begint.
 - **Twee schermen via HDMI**: De `pygame` bibliotheek wordt gebruikt om twee aparte schermen aan te sturen met verschillende timing-informatie voor elke auto.
 
 ### Stap 3: Uitvoering
+
 1. **Verbind alles volgens de bovenstaande aansluitingen**.
 2. **Start het script** met:
+
    ```bash
    python3 f1_start_rfid.py
    ```
+
 3. **Druk op de startknop** om de race te starten.
 4. **Druk op de resetknop** om de timing en schermen te resetten.
 
 ---
 
-Als je alles hebt aangesloten en het script draait, kun je de race starten en de tijden volgen voor beide auto's op twee verschillende schermen! 
+Als je alles hebt aangesloten en het script draait, kun je de race starten en de tijden volgen voor beide auto's op twee verschillende schermen!
