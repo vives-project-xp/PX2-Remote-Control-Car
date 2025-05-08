@@ -6,19 +6,9 @@ Hier is de algemene documentatie waar je links hebt naar de andere readme's van 
 
 - [Documentatie](#documentatie)
   - [Inhoudstafel](#inhoudstafel)
-  - [Readme's](#readmes)
   - [Bronnen](#bronnen)
   - [BOM](#bom)
   - [Architecture document](#architecture-document)
-
-## Readme's
-
-- [Circuit](/circuit/README.md)
-- [Besturing](/Besturing/README.md)
-- [testen](./testen.md)
-- [communicatie](/Video/Communicatie/README.md)
-- [camera](/Video/Camera/camera.md)
-- [bril](/Video/Bril/README.md)
 
 ## Bronnen
 

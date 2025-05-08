@@ -1,8 +1,12 @@
 # Dashboard en lichten code
 
+## Contents
+
+In deze folder bevindt zich de code voor het dashboard en de lichten aan te sturen. Dit zijn de 2 bestanden [Dashboard_lights.py](Dashboard_lights.py) en [light_control.py](./light_control.py). Verder zitten ook de geluidsbestanden [long_beep.wav](./long_beep.wav) en [smal_Beep.wav](smal_Beep.wav) in deze folder.
+
 ## Hoe gebruiken
 
-Voor lichten en dashboard hebben we 2 code bestanden Dashboard_lights.py en light_control.py. Voor het programma te laten draaien moet je alleen Dashboard_lights.py runnen, hiermee zullen lichten, geluid en dashboard werken.
+Voor het programma te laten draaien moet je alleen Dashboard_lights.py runnen, hiermee zullen lichten, geluid en dashboard werken. Beide bestanden moeten in dezelfde folder staan op een raspi 4. Verder moet je ook de bestanden long_beep.wav en smal_beep.wav in dezelfde folder hebben als de code bestanden.
 
 ## Dependencies
 
