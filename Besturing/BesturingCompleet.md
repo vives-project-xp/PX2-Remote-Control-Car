@@ -6,16 +6,14 @@ We merken dat de besturing van de auto gebeurt door aan potentiometers te draaie
 ![20250227_154236](https://github.com/user-attachments/assets/cfab9f6f-1a88-4409-8efe-c221b727cd5d)
 
 ### Test
+
 We kunnen de aansluiting testen door de potentiometers te vervangen door een spanningsbron en te observeren wat er gebeurt:
+
 - Links = **0V**
 - Rechts = **3,3V**
 - Neutraal = **1,65V**
 - **Gas geven**: 0V = volle gas vooruit
 - **Achteruit**: 3,3V = volle snelheid achteruit
-
-
-
-
 
 ## Stap 2: Verbinden met een Raspberry Pi
 
@@ -27,7 +25,7 @@ Een Raspberry Pi kan niet zomaar een spanning uitsturen. Gelukkig is er een oplo
    - **Componenten**:
      - **1kΩ weerstand** in serie
      - **22pF condensator** naar de grond
-     
+
 Raspberry Pi GPIO18 (PWM) ---> [1kΩ Resistor] ---> Output Voltage to Circuit
                                       |
                                       |
@@ -38,18 +36,13 @@ Raspberry Pi GPIO18 (PWM) ---> [1kΩ Resistor] ---> Output Voltage to Circuit
 
 ![Picture1](https://github.com/user-attachments/assets/3922a3ea-c0b2-47b8-b83a-f697d2834242)
 
-
-
-
-
-https://github.com/user-attachments/assets/40285a8b-6b43-4666-bb9f-b8aa4ce95980
-
+[github](https://github.com/user-attachments/assets/40285a8b-6b43-4666-bb9f-b8aa4ce95980)
 
 ## Stap 3: Een programma schrijven
 
 Het programma moet de inputs lezen en omzetten naar een spanningsoutput. Dit kan bijvoorbeeld met Python en de `RPi.GPIO` of `pigpio` bibliotheek.
 
-```
+```python
 import pygame  # Voor de input van stuur en pedalen in te lezen
 import time
 import lgpio  # Voor de GPIO-besturing van de motoren
