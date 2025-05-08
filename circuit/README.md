@@ -10,7 +10,6 @@ In deze folder bevinden zich alle bestanden voor het circuit te maken en het sta
 - Render voorbeelden: Hier bevinden zich foto's van waarop we ons circuit gebaseerd hebben.
 - Schema: Hier bevindt zich een schema van hoe alle kabels en componenten verbonden zijn voor het start-stopsysteem.
 
-
 ## Projectoverzicht
 
 Het bedenken en maken van een start-finish lijn en hoe de timing en ronden bij te houden.
