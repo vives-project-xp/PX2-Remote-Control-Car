@@ -1,8 +1,8 @@
 
-import pygame  # Voor de input van stuur en pedalen in te lezen
+import pygame
 import time
-import lgpio  # Voor de GPIO-besturing van de motoren
-import math  # Voor exponentiële berekeningen
+import lgpio
+import math
 
 # Define GPIO pins
 STEERING_PIN = 18  # PWM pin voor sturen
@@ -15,16 +15,14 @@ chip = lgpio.gpiochip_open(0)
 lgpio.gpio_claim_output(chip, STEERING_PIN)
 lgpio.gpio_claim_output(chip, THROTTLE_PIN)
 
-# pygame init
 pygame.init()
 pygame.joystick.init()
 
-# Zoek en initialiseer het stuur
 joystick = pygame.joystick.Joystick(0)
 joystick.init()
 
 def scale_exponential(value, min_input, max_input, min_output, max_output, k=2):
-    """Schaal een waarde met een exponentiële curve voor geleidelijke respons."""
+    
     # Normaliseer de waarde tussen 0 en 1
     normalized = (value - min_input) / (max_input - min_input)
     # Pas exponentiële curve toe
@@ -37,7 +35,6 @@ def set_voltage(pin, voltage):
     duty_cycle = (voltage / 3.3) * 100  # Converteer spanning naar duty cycle (0-100%)
     lgpio.tx_pwm(chip, pin, 800, duty_cycle)  # 1000Hz PWM
 
-# Gevoeligheid van de besturing
 STEERING_SENSITIVITY = 2
 
 try:
@@ -50,7 +47,7 @@ try:
         steering = joystick.get_axis(0)
         steering = steering * STEERING_SENSITIVITY  
         steering = max(min(steering, 1), -1)  
-        steering_voltage = (steering + 1) / 2 * 3.3  # Normale lineaire schaling
+        steering_voltage = (steering + 1) / 2 * 3.3
         set_voltage(STEERING_PIN, steering_voltage)
         print(f"Stuur: {steering:.2f}, Voltage: {steering_voltage:.2f}V")
 
@@ -62,20 +59,18 @@ try:
         brake = joystick.get_axis(1)
         
         # Prioriteit geven aan remmen als beide pedalen worden ingedrukt
-        if brake < 0.9:  # Rem wordt ingedrukt
-            # Schaal de remwaarde naar 1.65-2.5V met exponentiële curve
-            brake_normalized = (brake - 1) / (-1 - 1)  # Normaliseer naar 0-1 (1 = geen rem, -1 = vol rem)
+        if brake < 0.9:
+            brake_normalized = (brake - 1) / (-1 - 1)
             throttle_voltage = scale_exponential(brake_normalized, 0, 1, 1.65, 2, k=2)
-        elif throttle < 0.9:  # Alleen gas wordt ingedrukt
-            # Schaal de gaswaarde naar 0.75-1.65V met exponentiële curve
-            throttle_normalized = (throttle - 1) / (-1 - 1)  # Normaliseer naar 0-1 (1 = geen gas, -1 = vol gas)
+        elif throttle < 0.9:
+            throttle_normalized = (throttle - 1) / (-1 - 1)
             throttle_voltage = scale_exponential(throttle_normalized, 0, 1, 1.65, 0.85, k=2)
 
         set_voltage(THROTTLE_PIN, throttle_voltage)
 
         print(f"Throttle: {throttle:.2f}, Brake: {brake:.2f}, Voltage: {throttle_voltage:.2f}V")
 
-        time.sleep(0.05)  # Voorkom CPU-overbelasting
+        time.sleep(0.05)
 
 except KeyboardInterrupt:
     print("\nAfsluiten...")
