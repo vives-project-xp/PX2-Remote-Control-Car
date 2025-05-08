@@ -50,4 +50,14 @@ De BOM of Bill of Materials lijst alle componenten die nodig zijn voor 2 auto's,
 
 Dit is het architectuur document.
 
-![](architectur.drawio.png)
+![architectuur](architectur.drawio.png)
+
+Dit is het schema voor start-stop systeem.
+
+![start-stop](../circuit/schema/aansluitschema_circuit.png)
+
+Dit is schema van PCB
+
+![top](../Besturing/Images/simulation_image_top%20(2).png)
+
+![bottom](../Besturing/Images/simulation_image_bottom%20(2).png)
