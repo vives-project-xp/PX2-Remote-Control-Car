@@ -27,7 +27,7 @@ bv project
 
 Gaan naar je folder
 
-````bash
+````sh
 cd project
 ````
 
@@ -35,7 +35,7 @@ cd project
 
 Je wordt root user:
 
-````bash
+````sh
 sudo su
 ````
 
@@ -70,14 +70,14 @@ sudo pip install -r < text.file >
 
 Run je script
 
-````bash
-python < program.py >
+````sh
+pip python < program.py >
 ````
 
 ----
 
 ## voorbeeld
 
-![install path](<img/install  path.png>)
+![install path](/Handleidingen/Images/install_path.png)
 
-![activate venv](<img/activate venv.png>)
+![activate venv](/Handleidingen/Images/activate_venv.png)
