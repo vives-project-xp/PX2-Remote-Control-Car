@@ -10,7 +10,7 @@ Een deel van de besturing laten we gewoon zoals het is – dat stuk noemen we vo
 Voor onze PCB moeten we eerst een representatie van de BlackBox maken in EAGLE. Zo krijgen we een beter beeld van hoe we onze componenten kunnen plaatsen en waar precies, zodat alles goed past en we voldoende ruimte hebben.
 Daarvoor gaan we de BlackBox opmeten en nagaan welke pinnen effectief gebruikt worden. Op die manier weten we exact welke pinheaders we in onze tekening moeten voorzien.
 
-![zelf getekende footprint](Images/Footprint_BB.jpg)
+![zelf getekende footprint](Besturing/Images/Footprint_BB.jpg)
 
 Met deze tekening kunnen we starten aan de footprint van de BlackBox. Ik heb de afmetingen genomen met een schuifmaat, zodat alles zo precies mogelijk klopt.
 
