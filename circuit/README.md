@@ -4,9 +4,9 @@ In deze folder bevinden zich alle bestanden voor het circuit te maken en het sta
 
 ## Folder structuur
 
-- [Code](./code/README.md): Hier bevindt zich de code voor dashboard
-- [Documentatie](./documentatie/README.md): Hier bevindt zich de documentatie van ontwerp en research
-- [Pi led configuraties](./pi%20led%20configuraties/README.md): Hier bevindt zich foto's en documentatie hoe alles is verbonden en werkt.
+- [Code](./code/): Hier bevindt zich de code voor dashboard
+- [Documentatie](./documentatie/): Hier bevindt zich de documentatie van ontwerp en research
+- [Pi led configuraties](./pi%20led%20configuraties/): Hier bevindt zich foto's en documentatie hoe alles is verbonden en werkt.
 - [Render voorbeelden](./render%20voorbeelden/): Hier bevinden zich foto's van waarop we ons circuit gebaseerd hebben.
 - [Schema](./schema/): Hier bevindt zich een schema van hoe alle kabels en componenten verbonden zijn voor het start-stopsysteem.
 
