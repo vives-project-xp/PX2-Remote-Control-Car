@@ -4,9 +4,7 @@ hier zie je alle finale 3D prints die gebruikt zijn geweest.
 
 ## prints
 
-[battery case voor de headset](battery%20case%20headset%20v5.stl)
-
-![battery case voor de headset](./images/)
+[battery case voor de headset STL-File](battery%20case%20headset%20v5.stl)
 
 ## Beschrijving
 
@@ -30,17 +28,17 @@ De houder dient om het **Tattu LiPo accupack (14,8 V, 2300 mAh)** en de bijbehor
 - Tattu LiPo accupack 14,8 V – 2300 mAh  
 - Andere packs met vergelijkbare afmetingen (optioneel)
 
-[camera stand voor de 4X4](CE3S1_camera%20stand%20v3.stl)
-
-![camera stand voor de 4X4](./images/Chassis_Stampede_4x4.png)
+![battery case voor de headset](./images/)
 
 # Walksnail Camera Mount voor Slash-chassis
 
-[camera stand voor de](camera%20v20%20met%20klik%20stukken.stl)
+[camera stand voor de slash-chassis STL-File](camera%20v20%20met%20klik%20stukken.stl)
+
+[camera stand voor de 4X4-chassis STL-File](CE3S1_camera%20stand%20v3.stl)
 
 ## Beschrijving
 
-Deze 3D-print is ontworpen om de **Walksnail-camera** (meegeleverd met de FPV-bril) correct te monteren op het **Slash-chassis** (zie foto hieronder).
+Deze 3D-prints zijn ontworpen om de **Walksnail-camera** (meegeleverd met de FPV-bril) correct te monteren op het **Slash-chassis** en **4x4-chassis** (zie foto hieronder).
 
 ### Montage-instructies
 
@@ -67,6 +65,8 @@ Deze 3D-print is ontworpen om de **Walksnail-camera** (meegeleverd met de FPV-br
 - ✅ Verbeterde koeling dankzij actieve luchtstroom  
 - ✅ Compatibel met het originele Slash-chassis en mousse
 
-[camera stand voor de slash chassis](CE3S1_camera%20stand%20v3.stl)
+***slash-chassis***
+![camera stand voor de slash-chassis](./images/chassis_slash.png)
 
-![camera stand voor de slash chassis](./images/chassis_slash.png)
+***4x4-chassis***
+![camera stand voor de 4X4-chassis](./images/Chassis_Stampede_4x4.png)
