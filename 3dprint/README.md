@@ -66,7 +66,9 @@ Deze 3D-prints zijn ontworpen om de **Walksnail-camera** (meegeleverd met de FPV
 - ✅ Compatibel met het originele Slash-chassis en mousse
 
 ***slash-chassis***
+
 ![camera stand voor de slash-chassis](./images/chassis_slash.png)
 
 ***4x4-chassis***
+
 ![camera stand voor de 4X4-chassis](./images/Chassis_Stampede_4x4.png)
